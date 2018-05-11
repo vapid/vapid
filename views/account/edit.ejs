@@ -1,0 +1,16 @@
+<h1 class="ui header"><%- title %></h1>
+
+<form class="ui form" action="<%- action %>" method="post">
+  <div class="field">
+    <label>Email Address</label>
+    <input type="email" name="email" value="<%- email %>" required=true>
+  </div>
+
+  <div class="field">
+    <label>New Password</label>
+    <input type="password" name="password" required=true>
+  </div>
+
+  <input type="hidden" name="_csrf" value="<%- csrf %>">
+  <input class="ui left floated button" type="submit" value="Update">
+</form>
