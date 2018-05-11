@@ -1,6 +1,6 @@
 {
   "name": "vapid-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Vapid, a template-driven content management system",
   "repository": "vapid/vapid",
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "aws4": "^1.7.0",
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^2.0.1",
     "boom": "^7.2.0",
     "colors": "^1.1.2",
     "commander": "^2.12.2",
@@ -78,7 +78,7 @@
     "tmp": "^0.0.33",
     "umzug": "^2.1.0",
     "unfurl.js": "^1.1.6",
-    "webpack": "^4.5.0",
+    "webpack": "^4.8.2",
     "write-pkg": "^3.1.0"
   },
   "devDependencies": {

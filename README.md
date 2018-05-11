@@ -1,4 +1,4 @@
-<img src="/assets/dashboard/images/logo.svg" width="300px" height="auto" alt="Vapid logo">
+<img src="http://cdn.vapid.com/logo.svg" width="300px" height="auto" alt="Vapid logo">
 
 A template-driven content management system.
 
