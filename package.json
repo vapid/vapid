@@ -2,7 +2,7 @@
   "name": "vapid-cli",
   "version": "0.1.1",
   "license": "MIT",
-  "description": "Vapid, a template-driven content management system",
+  "description": "A template-driven content management system",
   "repository": "vapid/vapid",
   "author": "Scott Robbin <scott@vapid.com>",
   "bin": {
