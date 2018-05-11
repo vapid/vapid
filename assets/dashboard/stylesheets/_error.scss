@@ -1,0 +1,13 @@
+body.error {
+  .vertical.segment {
+    padding: 1rem !important;
+  }
+
+  .ui.table {
+    max-width: 40rem;
+
+    td:first-of-type {
+      font-weight: bold;
+    }
+  }
+}

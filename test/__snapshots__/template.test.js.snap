@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#parse parses order by clause 1`] = `
+Object {
+  "general": Object {
+    "fields": Object {},
+    "keyword": undefined,
+    "name": "general",
+    "params": Object {},
+  },
+  "section offices order=city,-name": Object {
+    "fields": Object {},
+    "keyword": "section",
+    "name": "offices",
+    "params": Object {
+      "order": "city,-name",
+    },
+  },
+}
+`;
+
+exports[`#parse parses parameters with escaped quotes 1`] = `
+Object {
+  "general": Object {
+    "fields": Object {
+      "test placeholder=\\"Testing \\\\\\"quotes\\\\\\" in the middle.\\"": Object {
+        "name": "test",
+        "params": Object {
+          "placeholder": "Testing \\"quotes\\" in the middle.",
+        },
+      },
+    },
+    "keyword": undefined,
+    "name": "general",
+    "params": Object {},
+  },
+}
+`;
+
+exports[`#parse parses parameters with escaped quotes 2`] = `
+Object {
+  "general": Object {
+    "fields": Object {
+      "test placeholder=\\"If this'll work\\"": Object {
+        "name": "test",
+        "params": Object {
+          "placeholder": "If this'll work",
+        },
+      },
+    },
+    "keyword": undefined,
+    "name": "general",
+    "params": Object {},
+  },
+}
+`;
+
+exports[`#parse puts fields into separate branches 1`] = `
+Object {
+  "general": Object {
+    "fields": Object {
+      "name": Object {
+        "name": "name",
+        "params": Object {},
+      },
+    },
+    "keyword": undefined,
+    "name": "general",
+    "params": Object {},
+  },
+  "section about": Object {
+    "fields": Object {
+      "bio": Object {
+        "name": "bio",
+        "params": Object {},
+      },
+      "name": Object {
+        "name": "name",
+        "params": Object {},
+      },
+    },
+    "keyword": "section",
+    "name": "about",
+    "params": Object {},
+  },
+}
+`;
+
+exports[`#render renders partials 1`] = `"Hello, World. I'm a partial. World"`;
+
+exports[`#render replaces tags with content 1`] = `"Hello, World."`;

@@ -1,0 +1,19 @@
+<h1 class="ui header">Delete <%- record.section.labelSingular %></h1>
+
+<p>Are you use you'd like to delete this <%- record.section.labelSingular.toLowerCase() %>?</p>
+
+<table class="ui definition table">
+  <tbody>
+    <% record.section.tableColumns.forEach(key => { %>
+    <tr>
+      <td><%- key %></td>
+      <td><%- record.content[key.toLowerCase()] %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<form method="post">
+  <input type="hidden" name="_csrf" value="<%- csrf %>">
+  <input type="submit" class="ui red button" value="Delete">
+</form>

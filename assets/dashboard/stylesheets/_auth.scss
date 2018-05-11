@@ -1,0 +1,21 @@
+/* Auth */
+body.auth {
+  display: flex;
+  align-items: center;
+  color: #1b1c1d;
+
+  main {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: block;
+    max-width: 160px;
+    margin: 0 auto 2rem;
+
+    path {
+      fill: #1b1c1d;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%- title %> | Vapid Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="/dashboard/vendor/semantic-ui/semantic.min.css">
+  <link rel="stylesheet" href="/dashboard/vendor/trix/trix.css">
+  <link rel="stylesheet" href="/dashboard/stylesheets/dashboard.css">
+</head>
+<body>
+  <nav class="ui fixed inverted top menu">
+    <a class="icon item" data-toggle="sidebar">
+      <i class="content icon"></i>
+    </a>
+    <a href="/dashboard" class="item item-home item-nohover"></a>
+  </nav>
+
+  <nav class="ui fixed sidebar inverted vertical menu">
+    <a href="/dashboard" class="item item-home item-nohover">
+      <%- include('../logo.svg') %>
+    </a>
+
+    <div class="item">
+      <div class="header">Content</div>
+      <div class="menu">
+        <% contentSections.forEach(s => { %>
+          <a href="/dashboard/sections/<%- s.id %>" class="<% if (s.id == section.id) { %>active <% } %>item">
+            <span>
+              <i class="<%- s.multiple ? 'list' : 'file outline' %> icon"></i>
+              <%- s.label %>
+            </span>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+
+    <% if (formSections.length) { %>
+    <div class="item">
+      <div class="header">Forms</div>
+      <div class="menu">
+        <% formSections.forEach(s => { %>
+          <a href="/dashboard/sections/<%- s.id %>" class="<% if (s.id == section.id) { %>active <% } %>item">
+            <span>
+              <i class="envelope outline icon"></i>
+              <%- s.label %>
+            </span>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+    <% } %>
+
+    <div class="item">
+      <div class="header">Settings</div>
+      <div class="menu">
+        <% if (showBuild) { %>
+        <a href="/dashboard/build" class="item">
+          <span><i class="sync icon"></i> Build Site</span>
+        </a>
+        <% } %>
+        <a href="/dashboard/sign_out" class="item">
+          <span><i class="sign out alternate icon"></i> Sign Out</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pusher">
+    <main>
+      <div class="ui build warning icon message <% if (!needsBuild) { %>hidden<% } %>">
+        <i class="sync icon"></i>
+        <div class="content">
+          Your site templates have changed. Please <a href="/dashboard/build">rebuild now</a> to update the dashboard.
+        </div>
+      </div>
+
+      <%- include('../flash') %>
+      <%- include(`../${yield}`) %>
+    </main>
+  </div>
+
+  <script src="/dashboard/vendor/jquery.min.js"></script>
+  <script src="/dashboard/vendor/semantic-ui/semantic.min.js"></script>
+  <script src="/dashboard/vendor/trix/trix.js"></script>
+  <script src="/dashboard/vendor/ace.min.js"></script>
+  <script src="/dashboard/javascripts/dashboard.js"></script>
+</body>
+</html>

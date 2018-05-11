@@ -1,0 +1,18 @@
+.ui.top.menu {
+  background-image: url('../images/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 1.2rem;
+
+  svg {
+    height: 1rem;
+  }
+
+  .item-home {
+    flex: auto !important;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

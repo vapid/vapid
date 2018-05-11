@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`privateFiles 404 when paths starts with a period 1`] = `"Filenames starting with an underscore or period are private, and cannot be served."`;
+
+exports[`privateFiles 404 when paths starts with an underscore 1`] = `"Filenames starting with an underscore or period are private, and cannot be served."`;

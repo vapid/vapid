@@ -1,0 +1,33 @@
+<div class="ui vertical basic clearing segment">
+  <a href="./records/new" class="ui right floated small button">New <%- section.labelSingular %></a>
+
+  <h1 class="ui left floated header">
+    <%- title %>
+  </h1>
+</div>
+
+<table class="ui striped preview table">
+  <thead>
+    <tr>
+      <% section.tableColumnsHeaders.forEach(header => { %>
+      <th><%- header %></th>
+      <% }) %>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% section.records.forEach(record => { %>
+    <tr>
+      <% section.tableColumns.forEach(key => { %>
+      <td><%- record.previewContent(key.toLowerCase(), section) %></td>
+      <% }) %>
+      <td class="right aligned">
+        <a href="../../records/<%- record.id %>/edit">
+          <i class="ui edit icon"></i>
+          Edit
+        </a>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

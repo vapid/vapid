@@ -1,0 +1,29 @@
+.ui.sidebar {
+  .logo {
+    display: none;
+    margin: 0.5rem 2rem;
+  }
+
+  .item-home {
+    margin-top: 15px;
+  }
+
+  .item:last-of-type:before {
+    display: none;
+  }
+
+  @include desktop {
+    width: 15rem !important;
+    visibility: visible;
+    -webkit-transform: translate3d(0,0,0) !important;
+    transform: translate3d(0,0,0) !important;
+
+    .item-home {
+      margin-top: 0;
+    }
+
+    .logo {
+      display: inline-block;
+    }
+  }
+}

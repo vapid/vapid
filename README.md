@@ -1,0 +1,52 @@
+<img src="/assets/dashboard/images/logo.svg" width="300px" height="auto" alt="Vapid logo">
+
+A template-driven content management system.
+
+## Installation
+
+Currently, Vapid is available through [npm](https://www.npmjs.com/).
+
+```
+npm install -g vapid-cli
+```
+
+_Note: A desktop GUI application is coming soon—please add yourself to [the mailing list](https://www.vapid.com) if you'd like to be notified when that is available._
+
+## Usage
+
+To create a new website project, use the Vapid command line tool:
+
+```
+vapid new path/to/project/folder
+```
+
+Then change to the project directory, and start the development server. By default, the server will livereload, and refresh your website as you change the source files.
+
+```
+cd path/to/project/folder
+vapid start .
+```
+
+A few files and folders you should be aware of:
+
+File/Folder | Description
+--- | ---
+www | Your website files. Anything you put in here is an accessible resource, with the exceptions of files that start with underscores or periods—those are private/special. Sass and JS files that have the `.pack.js`, `.pack.scss`, or `.pack.sass` extensions will be compiled by Webpack.
+data | SQLite database file, and uploaded images. In general, you do not want to mess with this folder.
+node_modules | This one should also be ignored.
+package_json | Information about your project, including Vapid configuration options.
+.env | A private file that contains server environment variables, like the SECRET_KEY used by the web server.
+
+## Deploying
+
+Vapid can be deployed to any hosting service that supports Node.js. Here are a few to consider:
+
+Service | Notes
+--- | ---
+Vapid | Zero-config service that can be accessed via the `vapid deploy` command. Note: it is currently in [private beta](https://www.vapid.com).
+Heroku | Free or paid tiers. One thing to note is that Heroku's file system is ephemeral, so Vapid's `type=image` directives won't work here.
+Glitch | The easiest way to [take Vapid for a test-drive](https://glitch.com/~vanilla-melody).
+
+# License
+
+[MIT](/LICENSE.md)

@@ -1,0 +1,93 @@
+{
+  "name": "vapid-cli",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Vapid, a template-driven content management system",
+  "repository": "vapid/vapid",
+  "author": "Scott Robbin <scott@vapid.com>",
+  "bin": {
+    "vapid": "./bin/cli.js"
+  },
+  "scripts": {
+    "lint": "eslint bin lib test",
+    "test": "jest"
+  },
+  "keywords": [
+    "app",
+    "cms",
+    "framework",
+    "web"
+  ],
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**.test.js"
+    ],
+    "bail": true,
+    "testEnvironment": "node"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "assets/*"
+    ]
+  },
+  "dependencies": {
+    "aws4": "^1.7.0",
+    "bcrypt": "^1.0.3",
+    "boom": "^7.2.0",
+    "colors": "^1.1.2",
+    "commander": "^2.12.2",
+    "css-loader": "^0.28.11",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.7",
+    "form-data": "^2.3.2",
+    "glob": "^7.1.2",
+    "got": "^8.3.1",
+    "inquirer": "^5.2.0",
+    "koa": "^2.4.1",
+    "koa-better-flash": "^0.0.3",
+    "koa-bodyparser": "^4.2.0",
+    "koa-busboy": "^1.1.1",
+    "koa-csrf": "^3.0.6",
+    "koa-helmet": "^4.0.0",
+    "koa-log": "^2.1.0",
+    "koa-mount": "^3.0.0",
+    "koa-passport": "^4.0.1",
+    "koa-router": "^7.3.0",
+    "koa-session": "^5.8.1",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4",
+    "koa-webpack": "^3.0.2",
+    "livereload": "^0.7.0",
+    "lodash": "^4.17.5",
+    "markdown-it": "^8.4.1",
+    "md5-file": "^4.0.0",
+    "memory-cache": "^0.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "mkdirp": "^0.5.1",
+    "netrc": "^0.1.4",
+    "node-sass": "^4.8.3",
+    "passport-local": "^1.0.0",
+    "pluralize": "^7.0.0",
+    "resolve-url-loader": "^2.3.0",
+    "sanitize-html": "^1.18.2",
+    "sass-loader": "^7.0.1",
+    "sequelize": "^4.37.6",
+    "sqlite3": "^3.1.13",
+    "strftime": "^0.10.0",
+    "style-loader": "^0.20.3",
+    "tmp": "^0.0.33",
+    "umzug": "^2.1.0",
+    "unfurl.js": "^1.1.6",
+    "webpack": "^4.5.0",
+    "write-pkg": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "supertest": "^3.0.0"
+  }
+}

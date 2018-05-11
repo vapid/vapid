@@ -1,0 +1,7 @@
+<h1 class="ui header"><%- title %></h1>
+
+<%- include(`_form_${form}`) %>
+
+<% if (form == 'email') { %>
+  <p><em>Note: This preview form is styled using Semantic UI, and may not resemble the one rendered on your site.</em></p>
+<% } %>

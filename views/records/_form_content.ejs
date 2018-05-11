@@ -1,0 +1,13 @@
+<% if (section.hasFields) { %>
+<form class="ui form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
+  <% for (let fieldName in section.fields) { %>
+    <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
+  <% } %>
+
+  <input type="hidden" name="_csrf" value="<%- csrf %>">
+  <input class="ui button" type="submit" value="Save">
+</form>
+<% } else { %>
+  <p>This section has no fields.</p>
+  <p><em>TODO: Explain how to add them in template.</em></p>
+<% } %>

@@ -1,0 +1,47 @@
+@import "vars";
+@import "mixins";
+@import "forms";
+@import "menus";
+@import "tables";
+@import "sidebar";
+@import "auth";
+@import "error";
+
+.pusher {
+  width: 100%;
+  padding: 4.5rem 1.5rem 1.5rem;
+
+  .hidden.message + .ui.header {
+    margin-top: -.14285714em;
+  }
+
+  @include desktop {
+    padding: 1.5rem 3rem 3rem 18rem;
+  }
+}
+
+main {
+  > .ui.clearing.segment {
+    padding-top: 0;
+  }
+
+  @include desktop {
+    .ui.form {
+      max-width: 50rem;
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.item-nohover:hover {
+  background: transparent !important;
+}
+
+.icon.message a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
+}

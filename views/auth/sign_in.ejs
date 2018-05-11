@@ -1,0 +1,13 @@
+<form class="ui form" method="post">
+  <div class="field">
+    <label class="hidden">Email</label>
+    <input type="text" name="email" placeholder="Email" autocapitalize="none" autofocus>
+  </div>
+  <div class="field">
+    <label class="hidden">Password</label>
+    <input type="password" name="password" placeholder="Password">
+  </div>
+
+  <input type="hidden" name="_csrf" value="<%- csrf %>">
+  <input type="submit" class="ui fluid button" value="Sign In">
+</form>

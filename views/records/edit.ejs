@@ -1,0 +1,15 @@
+<h1 class="ui header"><%- title %></h1>
+
+<form class="ui form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
+  <% for (let fieldName in record.section.fields) { %>
+    <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
+  <% } %>
+
+  <div>
+    <% if (section.multiple) { %>
+      <a href="./delete" class="ui right floated red button">Delete</a>
+    <% } %>
+    <input type="hidden" name="_csrf" value="<%- csrf %>">
+    <input class="ui left floated button" type="submit" value="Update">
+  </div>
+</form>

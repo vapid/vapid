@@ -1,0 +1,17 @@
+<form class="ui form" method="post">
+  <div class="field">
+    <p>Before we get started, let's create a dashboard login account for you.</p>
+  </div>
+  <div class="field">
+    <label class="hidden">Email</label>
+    <input type="text" name="email" placeholder="Email" value="<%- email %>" autocapitalize="none" autofocus>
+  </div>
+  <div class="field">
+    <label class="hidden">Password</label>
+    <input type="password" name="password" placeholder="Password">
+    <small>(min. 6 characters long)</small>
+  </div>
+
+  <input type="hidden" name="_csrf" value="<%- csrf %>">
+  <input type="submit" class="ui fluid button" value="Create Login">
+</form>
