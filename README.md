@@ -2,6 +2,8 @@
 
 A template-driven content management system.
 
+[![CircleCI](https://circleci.com/gh/vapid/vapid.svg?style=svg)](https://circleci.com/gh/vapid/vapid)
+
 ## Installation
 
 Currently, Vapid is available through [npm](https://www.npmjs.com/).
