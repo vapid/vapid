@@ -12,6 +12,9 @@
     "lint": "eslint bin lib test",
     "test": "jest"
   },
+  "engines": {
+    "node": ">=8.9.0"
+  },
   "keywords": [
     "app",
     "cms",
