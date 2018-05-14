@@ -69,8 +69,6 @@ program
     let deployContent = false;
     let answers;
 
-    Logger.info('Deploying your website...');
-
     if (!deployer.loggedIn) {
       Logger.info('Please enter your Vapid credentials, or visit vapid.com to signup.');
       answers = await inquirer.prompt([
@@ -113,6 +111,8 @@ program
 
       ({ deployContent } = answers);
     }
+
+    Logger.info('Deploying your website...');
 
     // TODO: Need Deployer to be more isolated, so it isn't aware of Section
     // and remove the need to connect to the DB

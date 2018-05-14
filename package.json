@@ -1,6 +1,6 @@
 {
   "name": "vapid-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "description": "A template-driven content management system",
   "repository": "vapid/vapid",
@@ -75,7 +75,7 @@
     "sanitize-html": "^1.18.2",
     "sass-loader": "^7.0.1",
     "sequelize": "^4.37.6",
-    "sqlite3": "^3.1.13",
+    "sqlite3": "^4.0.0",
     "strftime": "^0.10.0",
     "style-loader": "^0.20.3",
     "tmp": "^0.0.33",
