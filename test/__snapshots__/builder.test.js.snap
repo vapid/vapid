@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#tree creates tree from multiple files 1`] = `
+Object {
+  "general": Object {
+    "fields": Object {
+      "name": Object {
+        "type": "text",
+      },
+    },
+    "form": false,
+    "options": Object {},
+  },
+  "offices": Object {
+    "fields": Object {
+      "description": Object {
+        "type": "html",
+      },
+      "name": Object {
+        "label": "Branch Name",
+        "type": "text",
+      },
+    },
+    "form": false,
+    "options": Object {},
+  },
+}
+`;
+
+exports[`#tree picks up on changes to the template directory 1`] = `
+Object {
+  "general": Object {
+    "fields": Object {
+      "name": Object {
+        "type": "text",
+      },
+    },
+    "form": false,
+    "options": Object {},
+  },
+  "offices": Object {
+    "fields": Object {
+      "description": Object {
+        "type": "html",
+      },
+      "name": Object {
+        "label": "Branch Name",
+        "type": "text",
+      },
+    },
+    "form": false,
+    "options": Object {},
+  },
+}
+`;
+
+exports[`#tree picks up on changes to the template directory 2`] = `
+Object {
+  "general": Object {
+    "fields": Object {
+      "name": Object {
+        "type": "text",
+      },
+    },
+    "form": false,
+    "options": Object {},
+  },
+  "offices": Object {
+    "fields": Object {
+      "description": Object {
+        "type": "html",
+      },
+      "name": Object {
+        "label": "Branch Name",
+        "type": "text",
+      },
+      "phone": Object {
+        "type": "text",
+      },
+    },
+    "form": false,
+    "options": Object {},
+  },
+}
+`;
