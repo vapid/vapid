@@ -1,13 +1,46 @@
 body.error {
-  .vertical.segment {
-    padding: 1rem !important;
+  display: flex;
+  align-items: center;
+
+  main {
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      margin-top: 0;
+    }
   }
 
-  .ui.table {
-    max-width: 40rem;
+  .logo {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto 2rem;
 
-    td:first-of-type {
-      font-weight: bold;
+    path {
+      fill: #1b1c1d;
+    }
+  }
+
+  @include desktop {
+    br {
+      display: none;
+    }
+  }
+
+  &.trace {
+    display: block;
+
+    .vertical.segment {
+      padding: 1rem !important;
+    }
+
+    .ui.table {
+      max-width: 40rem;
+
+      td:first-of-type {
+        font-weight: bold;
+      }
     }
   }
 }
