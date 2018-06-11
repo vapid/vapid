@@ -15,7 +15,9 @@ function withVapid(command) {
       const vapid = new Vapid(cwd);
       await command(vapid);
     } catch (err) {
-      Logger.error(err.message);
+      // TODO: Deployer throws err.message, handle better
+      const message = err.response && err.response.body ? err.response.body.message : err.message;
+      Logger.error(message);
       process.exit(1);
     }
   };
