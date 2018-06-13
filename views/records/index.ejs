@@ -6,7 +6,7 @@
   </h1>
 </div>
 
-<table class="ui striped preview table">
+<table class="ui preview table <%- tableAction %>">
   <thead>
     <tr>
       <% section.tableColumnsHeaders.forEach(header => { %>
@@ -17,7 +17,7 @@
   </thead>
   <tbody>
     <% section.records.forEach(record => { %>
-    <tr>
+    <tr data-id="<%- record.id %>">
       <% section.tableColumns.forEach(key => { %>
       <td><%- record.previewContent(key.toLowerCase(), section) %></td>
       <% }) %>

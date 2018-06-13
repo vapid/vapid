@@ -1,0 +1,20 @@
+const sortable = require('../../vendor/html5sortable');
+
+const $el = $('.ui.draggable.table tbody');
+
+if ($el.length) {
+  sortable($el, {
+    forcePlaceholderSize: true,
+  });
+
+  $el[0].addEventListener('sortupdate', (e) => {
+    const { item } = e.detail;
+    const { index: from } = e.detail.origin;
+    const { index: to } = e.detail.destination;
+    const id = item.getAttribute('data-id');
+
+    $.post('./records/reorder', { id, from, to }).fail((err) => {
+      alert('Error: could not reorder records');
+    });
+  });
+}

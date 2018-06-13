@@ -1,3 +1,5 @@
+require('brace');
+
 // Ace Editor
 $('.ace_editor').each(function () {
   const $editor = $(this);
