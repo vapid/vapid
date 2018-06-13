@@ -86,6 +86,18 @@ Object {
 }
 `;
 
-exports[`#render renders partials 1`] = `"Hello, World. I'm a partial. World"`;
-
 exports[`#render replaces tags with content 1`] = `"Hello, World."`;
+
+exports[`.fromFile reads partials from disk 1`] = `
+"<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  Hello, .
+
+  I'm a partial. 
+</body>
+</html>"
+`;

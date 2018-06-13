@@ -9,7 +9,7 @@ describe('.constructor', () => {
   test('replaces partial with file contents', () => {
     const partials = [resolve(__dirname, 'fixtures', '_partial.html')];
     const partialContent = readFileSync(partials[0], 'utf-8');
-    const template = new Template('{{> partial}}', partials);
+    const template = new Template('{{> partial}}', { partial: partialContent });
 
     expect(template.html).toEqual(partialContent);
   });
@@ -25,6 +25,14 @@ describe('.fromFile', () => {
     const html = readFileSync(filePath, 'utf-8');
 
     expect(html).toEqual(template.html);
+  });
+
+  test('reads partials from disk', () => {
+    const filePath = resolve(__dirname, 'fixtures/with_partial.html');
+    const partials = [resolve(__dirname, 'fixtures', '_partial.html')];
+    const template = Template.fromFile(filePath, partials);
+
+    expect(template.render()).toMatchSnapshot();
   });
 });
 
@@ -82,14 +90,6 @@ describe('#parse', () => {
 describe('#render', () => {
   test('replaces tags with content', () => {
     const template = new Template('Hello, {{name}}.');
-    const rendered = template.render({ general: { name: 'World' } });
-
-    expect(rendered).toMatchSnapshot();
-  });
-
-  test('renders partials', () => {
-    const partials = [resolve(__dirname, 'fixtures', '_partial.html')];
-    const template = new Template('Hello, {{name}}. {{> partial}}', partials);
     const rendered = template.render({ general: { name: 'World' } });
 
     expect(rendered).toMatchSnapshot();
