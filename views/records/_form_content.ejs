@@ -1,5 +1,5 @@
 <% if (section.hasFields) { %>
-<form class="ui form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
+<form class="ui record form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
   <% for (let fieldName in section.fields) { %>
     <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
   <% } %>
