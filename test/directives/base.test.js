@@ -17,6 +17,12 @@ describe('.constructor', () => {
     const directive = new BaseDirective({ required: false });
     expect(directive.attrs.required).toBeFalsy();
   });
+
+  test('accepts a default value', () => {
+    const directive = new BaseDirective({ default: 'testing' });
+    expect(directive.render()).toEqual('testing');
+    expect(directive.input()).toMatch(/value="testing"/);
+  });
 });
 
 describe('#htmlAttributes', () => {
