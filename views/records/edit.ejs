@@ -7,7 +7,7 @@
 
   <div>
     <% if (section.multiple) { %>
-      <a href="./delete" class="ui right floated red button">Delete</a>
+      <a href="<%- deletePath %>" class="ui right floated red button">Delete</a>
     <% } %>
     <input type="hidden" name="_csrf" value="<%- csrf %>">
     <input class="ui left floated button" type="submit" value="Update">
