@@ -1,0 +1,89 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font-sans;
+  font-size: 1.4rem;
+  color: $grey-darkest;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 2rem 0;
+}
+
+a {
+  color: $blue-dark;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hidden {
+  &.desktop {
+    @include desktop {
+      display: none !important;
+    }
+  }
+}
+
+.floated {
+  @include desktop {
+    &.right { float: right; }
+    &.left  { float: left; }
+  }
+}
+
+main {
+  .heading {
+    padding: 1.6rem 2rem 1.5rem;
+    font-weight: 500;
+    line-height: 1em;
+    border-bottom: 1px solid $grey-lighterer;
+
+    &, h1 {
+      font-size: 2.4rem;
+    }
+
+    .menu {
+      list-style: none;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+
+      @include desktop {
+        float: right;
+        margin-top: 0;
+      }
+
+      &.basic {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 2.5rem 0 0;
+
+        @include desktop {
+          margin: 0 0 0 2.5rem;
+        }
+      }
+
+      a:not(.button) {
+        color: $grey-darkest;
+      }
+    }
+  }
+}

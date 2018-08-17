@@ -1,0 +1,70 @@
+.button {
+  display: inline-block;
+  min-width: 11.1rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: $blue-light;
+  background-image: linear-gradient(to bottom, $blue-light, $blue);
+
+  &:hover {
+    background: $blue;
+    text-decoration: none;
+  }
+
+  &.disabled {
+    background: $grey;
+    cursor: default;
+  }
+
+  &.small {
+    min-width: 7rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+  }
+
+  &.basic {
+    color: $blue;
+    border: 1px solid $blue;
+    background: white;
+
+    &:hover {
+      color: white;
+      background: $blue;
+    }
+  }
+
+  &.red {
+    background-color: $red-dark;
+    background-image: linear-gradient(to bottom, $red-dark, $red-darker);
+
+    &:hover {
+      background: $red-dark;
+    }
+  }
+
+  &.basic.red {
+    color: $red;
+    background: white;
+    border-color: $red;
+
+    &:hover {
+      color: white;
+      background: red;
+    }
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

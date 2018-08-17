@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%- title %> | Vapid Dashboard</title>
   <meta charset="utf-8">
+  <title><%- title %> | Vapid Dashboard</title>
+  <link rel="stylesheet" href="/dashboard/stylesheets/dashboard.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="csrf-token" content="<%- csrf %>">
-  <link rel="stylesheet" href="/dashboard/stylesheets/dashboard.css">
 </head>
-<body>
-  <nav class="ui fixed inverted top menu">
-    <a class="icon item" data-toggle="sidebar">
-      <i class="content icon"></i>
-    </a>
-    <a href="/dashboard" class="item item-home item-nohover"></a>
-  </nav>
+<body class="dashboard">
+  <header class="navbar">
+    <a href="#" class="toggle-sidebar" title="Toggle sidebar">Toggle sidebar</a>
+    <h2>
+      <a href="/dashboard"><%- siteName %></a>
+    </h2>
 
-  <nav class="ui fixed sidebar inverted vertical menu">
-    <a href="/dashboard" class="item item-home item-nohover">
-      <%- include('../logo.svg') %>
-    </a>
-
-    <div class="item">
-      <div class="header">Content</div>
-      <div class="menu">
-        <% contentSections.forEach(s => { %>
-          <a href="/dashboard/sections/<%- s.id %>" class="<% if (s.id == section.id) { %>active <% } %>item">
-            <span>
-              <i class="<%- s.multiple ? 'list' : 'file outline' %> icon"></i>
-              <%- s.label %>
-            </span>
-          </a>
-        <% }) %>
-      </div>
-    </div>
-
-    <% if (formSections.length) { %>
-    <div class="item">
-      <div class="header">Forms</div>
-      <div class="menu">
-        <% formSections.forEach(s => { %>
-          <a href="/dashboard/sections/<%- s.id %>" class="<% if (s.id == section.id) { %>active <% } %>item">
-            <span>
-              <i class="envelope outline icon"></i>
-              <%- s.label %>
-            </span>
-          </a>
-        <% }) %>
-      </div>
-    </div>
+    <% if (showBuild) { %>
+      <a href="/dashboard/build" class="build action button"><span>Build</span></a>
+    <% } else { %>
+      <a href="/" class="view action button" target="_blank"><span>View</span></a>
     <% } %>
+  </header>
 
-    <div class="item">
-      <div class="header">Settings</div>
-      <div class="menu">
-        <% if (showBuild) { %>
-        <a href="/dashboard/build" class="item">
-          <span><i class="sync icon"></i> Build Site</span>
-        </a>
-        <% } %>
-        <a href="/dashboard/account/edit" class="item">
-          <span><i class="user icon"></i> Account Info</span>
-        </a>
-        <a href="/dashboard/sign_out" class="item">
-          <span><i class="sign out alternate icon"></i> Sign Out</span>
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="pusher">
-    <main>
-      <div class="ui build warning icon message <% if (!needsBuild) { %>hidden<% } %>">
-        <i class="sync icon"></i>
-        <div class="content">
-          Your site templates have changed. Please <a href="/dashboard/build">rebuild now</a> to update the dashboard.
+  <nav class="sidebar">
+    <div>
+      <% if (contentSections.length) { %>
+      <div class="item">
+        <div class="header">Content</div>
+        <div class="menu">
+          <% contentSections.forEach(s => { %>
+            <a href="/dashboard/sections/<%- s.id %>" class="<% if (typeof section !== 'undefined' && s.id == section.id) { %>active <% } %>item">
+              <%- include(`../../assets/dashboard/images/${s.multiple ? 'multiple' : 'single'}.svg`) %>
+              <%- s.label %>
+            </a>
+          <% }) %>
         </div>
       </div>
+      <% } %>
 
-      <%- include('../flash') %>
-      <%- include(`../${yield}`) %>
-    </main>
-  </div>
+      <% if (formSections.length) { %>
+      <div class="item">
+        <div class="header">Forms</div>
+        <div class="menu">
+          <% formSections.forEach(s => { %>
+            <a href="/dashboard/sections/<%- s.id %>" class="<% if (typeof section !== 'undefined' && s.id == section.id) { %>active <% } %>item">
+              <%- include('../../assets/dashboard/images/form.svg') %>
+              <%- s.label %>
+            </a>
+          <% }) %>
+        </div>
+      </div>
+      <% } %>
+
+      <div class="item hidden desktop">
+        <div class="header">Settings</div>
+        <div class="menu">
+          <a href="/dashboard/site/edit" class="item" title="Current website settings">Current website</a>
+          <a href="/dashboard/sites" class="item" title="Switch websites">Switch websites</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <a href="/dashboard/account/edit" class="account">
+        <img src="<%- user.gravatar %>">
+        Your account
+      </a>
+      <a href="/dashboard/sign_out" class="sign-out">Sign out</a>
+      <a href="https://www.vapid.com" class="vapid">
+        <%- include('../../assets/dashboard/images/logo.svg') %>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <% for (let f in flash) { %>
+      <div class="ui tiny flash universal message <%- f %>%>"><%- flash[f] %></div>
+    <% } %>
+
+    <div class="ui tiny build universal warning message <% if (!needsBuild) { %>hidden<% } %>">
+      <div class="content">
+        Your site templates have changed. Please <a href="/dashboard/build">rebuild now</a> to update the dashboard.
+      </div>
+    </div>
+
+    <%- include(`../${yield}`) %>
+  </main>
 
   <script src="/dashboard/javascripts/dashboard.js"></script>
 </body>

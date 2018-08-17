@@ -1,15 +1,19 @@
-<h1 class="ui header"><%- title %></h1>
+<h1 class="heading"><%- title %></h1>
 
-<form class="ui record form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
-  <% for (let fieldName in record.section.fields) { %>
-    <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
-  <% } %>
+<section class="section">
+  <div class="content">
+    <form class="record form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
+      <% for (let fieldName in record.section.fields) { %>
+        <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
+      <% } %>
 
-  <div>
-    <% if (section.multiple) { %>
-      <a href="<%- deletePath %>" class="ui right floated red button">Delete</a>
-    <% } %>
-    <input type="hidden" name="_csrf" value="<%- csrf %>">
-    <input class="ui left floated button" type="submit" value="Update">
+      <div class="field">
+        <% if (section.multiple) { %>
+          <a href="<%- deletePath %>" class="right floated red button">Delete</a>
+        <% } %>
+        <input type="hidden" name="_csrf" value="<%- csrf %>">
+        <input class="button" type="submit" value="Update">
+      </div>
+    </form>
   </div>
-</form>
+</section>

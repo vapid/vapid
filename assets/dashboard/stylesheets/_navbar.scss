@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  height: $navbar-height;
+  align-items: center;
+  color: white;
+  background: $grey-darkest;
+
+  h2 {
+    flex: 1;
+    padding: 0 2rem;
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1em;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .switch-websites {
+    display: none;
+    height: $navbar-height;
+    width: $navbar-height;
+    font-size: 0;
+    background: url(../images/switch.svg) center center no-repeat;
+    border-right: 1px solid $grey-darker;
+
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  .toggle-sidebar {
+    display: inline-block;
+    height: $navbar-height;
+    width: $navbar-height;
+    font-size: 0;
+    background: url(../images/menu.svg) center center no-repeat;
+    border-right: 1px solid $grey-darker;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .edit-website {
+    display: none;
+    margin-left: 1rem;
+    content: url(../images/settings.svg);
+    vertical-align: middle;
+
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  .action {
+    min-width: 0;
+    margin-right: 1rem;
+    padding: 0.9rem 1rem;
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid white;
+
+    @include desktop {
+      min-width: 11.1rem;
+    }
+
+    span {
+      display: none;
+
+      @include desktop {
+        display: inline-block;
+      }
+    }
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+
+      @include desktop {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &.view:before {
+      content: url('../images/view.svg');
+    }
+
+    &.build:before {
+      content: url('../images/build.svg');
+    }
+  }
+}

@@ -1,0 +1,46 @@
+body.dashboard {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .sidebar {
+    left: $sidebar-width * -1;
+    position: fixed;
+    height: 100vh;
+    padding-top: $navbar-height;
+    transition: left 0.1s linear;
+    z-index: 10;
+
+    &.open {
+      left: 0;
+    }
+
+    @include desktop {
+      left: 0;
+    }
+  }
+
+  main {
+    padding: $navbar-height 0 6rem;
+    transition: padding-left 0.1s linear;
+
+    @include desktop {
+      padding-left: $sidebar-width;
+
+      // .heading {
+      //   position: fixed;
+      //   width: 100%;
+      //   background: white;
+      //   z-index: 10;
+
+      //   + .section:first-of-type {
+      //     margin-top: 5rem;
+      //   }
+      // }
+    }
+  }
+}

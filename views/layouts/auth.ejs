@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><%- title %> | Vapid Dashboard</title>
   <meta charset="utf-8">
+  <title><%- title %> | Vapid Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
@@ -10,9 +10,14 @@
 </head>
 <body class="auth">
   <main>
-    <%- include('../logo.svg') %>
-    <%- include('../flash') %>
-    <%- include(`../${yield}`) %>
+    <div>
+      <%- include('../flash') %>
+      <%- include(`../${yield}`) %>
+    </div>
   </main>
+
+  <a href="https://www.vapid.com" class="logo">
+    <%- include('../../assets/dashboard/images/logo.svg') %>
+  </a>
 </body>
 </html>

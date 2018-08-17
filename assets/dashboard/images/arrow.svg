@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Stroke 2586 + Stroke 2587 + Stroke 2588</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard-and-admin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard---Website-Settings-Copy" transform="translate(-1284.000000, -21.000000)" stroke="#FFFFFF" stroke-width="1.4">
+            <g id="Header---branding-+-main-actions">
+                <g id="Btn---Build-website" transform="translate(1265.000000, 0.000000)">
+                    <g id="Group-6" transform="translate(20.000000, 22.000000)">
+                        <g id="Stroke-2586-+-Stroke-2587-+-Stroke-2588">
+                            <g id="Group-7">
+                                <path d="M16,8 C16,12.4185455 12.4185455,16 8,16 C3.58145455,16 0,12.4185455 0,8 C0,3.58145455 3.58145455,0 8,0 C12.4185455,0 16,3.58145455 16,8 L16,8 Z" id="Stroke-2586"></path>
+                                <path d="M8,4.27272727 L8,11.7227271" id="Stroke-2587" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <polyline id="Stroke-2588" stroke-linecap="round" stroke-linejoin="round" points="4 8.27272727 8 4.27272727 12 8.27272727"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

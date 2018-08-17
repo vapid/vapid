@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Stroke 258 + Stroke 259 + Stroke 260</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Current" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Artboard" transform="translate(-1348.000000, -22.000000)" stroke="#FFFFFF">
+            <g id="Header---branding-+-main-actions">
+                <g id="Btn---default" transform="translate(1319.000000, 11.000000)">
+                    <g id="Group-2" transform="translate(30.000000, 8.000000)">
+                        <g id="Stroke-258-+-Stroke-259-+-Stroke-260" transform="translate(0.000000, 4.000000)">
+                            <g>
+                                <path d="M18,5.08695652 C18,5.08695652 13.9707391,10.173913 9,10.173913 C4.02926087,10.173913 0,5.08695652 0,5.08695652 C0,5.08695652 4.02926087,0 9,0 C13.9707391,0 18,5.08695652 18,5.08695652 L18,5.08695652 Z" id="Stroke-258"></path>
+                                <path d="M12.1304348,5.08695652 C12.1304348,6.81573913 10.7287826,8.2173913 9,8.2173913 C7.27121739,8.2173913 5.86956522,6.81573913 5.86956522,5.08695652 C5.86956522,3.35817391 7.27121739,1.95652174 9,1.95652174 C10.7287826,1.95652174 12.1304348,3.35817391 12.1304348,5.08695652 L12.1304348,5.08695652 Z" id="Stroke-259"></path>
+                                <path d="M9,3.52173913 C9.8643913,3.52173913 10.5652174,4.22256522 10.5652174,5.08695652 C10.5652174,5.95134783 9.8643913,6.65217391 9,6.65217391 C8.1356087,6.65217391 7.43478261,5.95134783 7.43478261,5.08695652" id="Stroke-260"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

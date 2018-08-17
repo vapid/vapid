@@ -1,21 +1,55 @@
-/* Auth */
 body.auth {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  color: #1b1c1d;
+  background: $grey-lightest;
 
   main {
-    width: 320px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 50rem;
     margin: 0 auto;
+    padding: 0 2rem;
+
+    > {
+      flex: none;
+    }
+  }
+
+  .form {
+    .field {
+      margin-bottom: 1rem;
+    }
+
+    input:not(.button) {
+      border-color: transparent;
+
+      &:focus {
+        border-color: $grey-lighterer;
+      }
+    }
   }
 
   .logo {
-    display: block;
-    max-width: 160px;
-    margin: 0 auto 2rem;
+    margin: 2rem auto;
+    width: 6rem;
 
     path {
-      fill: #1b1c1d;
+      fill: $grey;
+    }
+  }
+
+  .actions {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+
+    a.item {
+      color: $grey;
     }
   }
 }
