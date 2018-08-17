@@ -1,0 +1,40 @@
+.section {
+  padding: 4rem 2rem; 
+  border-bottom: 1px solid $grey-lighterer;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  > .header,
+  > .content {
+    width: 100%;
+    max-width: 68rem;
+    margin: 0 auto;
+
+    &.wide {
+      max-width: 108rem;
+    }
+  }
+
+  > .header {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  > .content {
+    // For table/Trix on mobile
+    overflow-x: auto;
+  }
+
+  .subheader {
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: $grey-dark;
+
+    strong {
+      color: $grey-darker;
+    }
+  }
+}

@@ -1,38 +1,110 @@
-.ui.form {
-  margin-bottom: 2rem;
+.form {
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 
-  .field {
+  input:not(.button),
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 1rem 1rem 1.1rem;
+    border: 1px solid $grey;
+    border-radius: $border-radius;
+
+    &::-webkit-input-placeholder { color: $grey; }
+    &::-moz-placeholder { color: $grey; }
+    &:-ms-input-placeholder { color: $grey; }
+    &:-moz-placeholder { color: $grey; }
+  }
+
+  .ace_editor,
+  trix-editor {
+    border: 1px solid $grey;
+    border-radius: $border-radius;
+  }
+
+  textarea {
+    min-height: 20rem;
+  }
+
+  .field,
+  .fields {
+    margin-bottom: 4rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.inline {
+      display: flex;
+
+      input.button {
+        margin-left: 1rem;
+      }
+    }
+
+    label {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+
+      &.hidden {
+        font-size: 0;
+        width: 0;
+        margin-bottom: 0;
+      }
+
+      + small {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &.required label:after {
+      display: inline-block;
+      content: '*';
+      color: $red;
+      margin-left: 0.5rem;
+    }
+
     > small {
-      color: #666;
+      display: block;
+      font-size: 1.2rem;
+      color: $grey-dark;
+
+      &.error-message {
+        color: $red;
+        margin-top: 0.5rem;
+      }
+
+      &.requirement {
+        margin-top: 1rem;
+      }
     }
 
     &.error {
       trix-editor,
       .ace_editor,
-      .previewable {
-        background-color: #fff6f6;
-        border-color: #e0b4b4;
+      .previewable,
+      .dropdown.selection,
+      .ui.checkbox label:before,
+      input:not(.button) {
+        background-color: $red-lighter;
+        border-color: $red;
       }
-
-      > small {
-        color: #9f3a38
-      }
-    }
-  }
-
-  .ui.checkbox {
-    display: block;
-    margin-bottom: 0.5rem;
-
-    &:after {
-      display: none;
     }
   }
 
   div.previewable {
     padding: 1em;
     border: 1px solid rgba(34,36,38,.15);
-    border-radius: 0.28571429rem;
+    border-radius: $border-radius;
 
     input:first-of-type {
       padding: 0;
@@ -46,4 +118,21 @@
       max-height: 150px;
     }
   }
+
+  /**
+   * Semantic UI overrides
+   */
+  .ui.checkbox {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .ui.label:hover {
+    text-decoration: none;
+  }
 }
+

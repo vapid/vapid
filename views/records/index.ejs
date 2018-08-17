@@ -1,33 +1,36 @@
-<div class="ui vertical basic clearing segment">
-  <a href="./records/new" class="ui right floated small button">New <%- section.labelSingular %></a>
-
-  <h1 class="ui left floated header">
-    <%- title %>
-  </h1>
+<div class="heading">
+  <%- title %>
+  
+  <ul class="basic menu">
+    <li><a href="./records/new" class="small basic button">New <%- section.labelSingular %></a></li>
+  </ul>
 </div>
 
-<table class="ui preview table <%- tableAction %>">
-  <thead>
-    <tr>
-      <% section.tableColumnsHeaders.forEach(header => { %>
-      <th><%- header %></th>
-      <% }) %>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% section.records.forEach(record => { %>
-    <tr data-id="<%- record.id %>">
-      <% section.tableColumns.forEach(key => { %>
-      <td><%- record.previewContent(key.toLowerCase(), section) %></td>
-      <% }) %>
-      <td class="right aligned">
-        <a href="../../records/<%- record.id %>/edit">
-          <i class="ui edit icon"></i>
-          Edit
-        </a>
-      </td>
-    </tr>
-    <% }) %>
-  </tbody>
-</table>
+<section class="section">
+  <div class="wide content">
+    <table class="preview table <%- tableAction %>">
+      <thead>
+        <tr>
+          <% section.tableColumnsHeaders.forEach(header => { %>
+          <th><%- header %></th>
+          <% }) %>
+          <th class="no-sort"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% section.records.forEach(record => { %>
+        <tr data-id="<%- record.id %>">
+          <% section.tableColumns.forEach(key => { %>
+          <td><%- record.previewContent(key.toLowerCase(), section) %></td>
+          <% }) %>
+          <td class="right aligned">
+            <a href="../../records/<%- record.id %>/edit" class="small basic button">
+              Edit
+            </a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table> 
+  </div> 
+</section>

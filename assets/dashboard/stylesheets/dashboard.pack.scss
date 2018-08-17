@@ -1,51 +1,24 @@
-@import url(/dashboard/vendor/semantic-ui/semantic.min.css);
 @import url(/dashboard/vendor/trix/trix.css);
 
 @import "vars";
 @import "mixins";
+@import "base";
+@import "layout";
 @import "forms";
-@import "menus";
+@import "typography";
+@import "buttons";
+@import "sections";
 @import "tables";
+@import "navbar";
 @import "sidebar";
+
 @import "auth";
 @import "error";
-@import "sortable";
 
-.pusher {
-  width: 100%;
-  padding: 4.5rem 1.5rem 1.5rem;
-
-  .hidden.message + .ui.header {
-    margin-top: -.14285714em;
-  }
-
-  @include desktop {
-    padding: 1.5rem 3rem 3rem 18rem;
-  }
-}
-
-main {
-  > .ui.clearing.segment {
-    padding-top: 0;
-  }
-
-  @include desktop {
-    .ui.form {
-      max-width: 50rem;
-    }
-  }
-}
-
-.hidden {
-  display: none !important;
-}
-
-.item-nohover:hover {
-  background: transparent !important;
-}
-
-.icon.message a {
-  color: inherit;
-  font-weight: bold;
-  text-decoration: underline;
-}
+// Semantic UI (w/ some overrides)
+@import "semantic/checkbox";
+@import "semantic/dropdown";
+@import "semantic/icon";
+@import "semantic/label";
+@import "semantic/message";
+@import "semantic/transition";

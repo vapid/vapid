@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="22px" viewBox="0 0 25 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - switch sites</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dashboard-and-admin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Dashboard---Website-Settings-Copy" transform="translate(-19.000000, -19.000000)" stroke="#FFFFFF">
+            <g id="Header---branding-+-main-actions">
+                <g id="Icon---switch-sites" transform="translate(20.000000, 19.000000)">
+                    <g id="Stroke-3625-+-Stroke-3626" transform="translate(0.000000, 12.000000)">
+                        <path d="M0,5 L18,5" id="Stroke-3625"></path>
+                        <polyline id="Stroke-3626" points="4.24185 9.5 -0.00015 5 4.25835 0.758"></polyline>
+                    </g>
+                    <g id="Stroke-3625-+-Stroke-3626" transform="translate(14.000000, 5.000000) scale(-1, 1) translate(-14.000000, -5.000000) translate(5.000000, 0.000000)">
+                        <path d="M0,5 L18,5" id="Stroke-3625"></path>
+                        <polyline id="Stroke-3626" points="4.24185 9.5 -0.00015 5 4.25835 0.758"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

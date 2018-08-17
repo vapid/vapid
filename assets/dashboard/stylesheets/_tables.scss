@@ -1,4 +1,22 @@
-.ui.table {
+.table {
+  width: 100%;
+  border-spacing: 0;
+  color: $grey-darkerer;
+
+  &.danger {
+    border: 1px solid $red;
+    font-size: 1.2rem;
+
+    .header {
+      font-size: 1.4rem;
+      color: $red;
+    }
+
+    td {
+      padding: 2rem !important;
+    }
+  }
+
   &.preview {
     td:first-of-type {
       min-width: 180px;
@@ -8,5 +26,44 @@
       width: auto;
       height: 60px;
     }
+  }
+
+  .header {
+    display: block;
+    font-weight: bold;
+  }
+
+  thead {
+    text-align: left;
+
+    th {
+      padding: 1.6rem 0;
+      border-bottom: 3px solid $grey-light;
+    }
+  }
+
+  thead + tbody tr:first-of-type td {
+    padding-top: 2rem;
+  }
+
+  tbody tr:last-of-type td {
+    padding-bottom: 0;
+  }
+
+  td {
+    padding: 2rem 2rem 2rem 0;
+    border-bottom: 1px solid $grey-light;
+
+    &:first-child { font-weight: 500; }
+    &:last-child  { padding-right: 0; }
+  }
+
+  tr.condensed td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  tr:last-child td {
+    border: none;
   }
 }

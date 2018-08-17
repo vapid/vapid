@@ -1,29 +1,102 @@
-.ui.sidebar {
-  .logo {
-    display: none;
-    margin: 0.5rem 2rem;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: $sidebar-width;
+  background: $grey-lightest;
+  overflow: scroll;
+
+  > div:first-child {
+    flex: auto;
+
+    > .item {
+      margin-bottom: 2rem;
+    }
   }
 
-  .item-home {
-    margin-top: 15px;
-  }
+  > div:last-child {
+    width: $sidebar-width - 0.1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
 
-  .item:last-of-type:before {
-    display: none;
-  }
+    .account {
+      display: block;
+      margin-bottom: 1.5rem;
+      color: $grey-darkest;
+      text-decoration: none;
 
-  @include desktop {
-    width: 15rem !important;
-    visibility: visible;
-    -webkit-transform: translate3d(0,0,0) !important;
-    transform: translate3d(0,0,0) !important;
+      &:hover {
+        text-decoration: underline;
+      }
 
-    .item-home {
-      margin-top: 0;
+      img {
+        display: block;
+        content: '';
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto 1rem;
+        background: black;
+        border-radius: 100%; 
+      }
     }
 
-    .logo {
-      display: inline-block;
+    .vapid {
+      display: block;
+      padding: 1.6rem 2rem 1.4rem;
+      margin-top: 2rem;
+      border-top: 1px solid $grey-lighter;
+
+      svg {
+        width: 5.2rem;
+
+        path {
+          fill: $grey-dark;
+        }
+      }
+
+      &:hover svg path {
+        fill: $grey-darkest;
+      }
+    }
+  }
+
+  .header {
+    padding: 2rem 2rem 1.9rem;
+    font-weight: 600;
+    line-height: 1.142857142857143em;
+  }
+
+  .menu {
+    .item {
+      position: relative;
+      display: block;
+      padding: 1.5rem 2rem 1.3rem 4.5rem;
+      text-decoration: none;
+      color: $grey-dark;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        margin-top: -1rem;
+
+        g {
+          stroke: $grey-dark;
+        }
+      }
+
+      &:hover,
+      &.active {
+        color: $grey-darkest;
+
+        g {
+          stroke: $grey-darkest;
+        }
+      }
+
+      &.active {
+        background-color: $grey-lighterer;
+      }
     }
   }
 }

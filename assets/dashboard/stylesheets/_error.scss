@@ -1,10 +1,14 @@
 body.error {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  background: $grey-lightest;
 
   main {
-    width: 320px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
     text-align: center;
 
     h1 {
@@ -13,34 +17,19 @@ body.error {
   }
 
   .logo {
-    display: block;
-    max-width: 120px;
-    margin: 0 auto 2rem;
+    margin: 2rem auto;
+    width: 6rem;
 
     path {
-      fill: #1b1c1d;
+      fill: $grey;
     }
   }
 
-  @include desktop {
-    br {
-      display: none;
-    }
-  }
+  br {
+    display: none;
 
-  &.trace {
-    display: block;
-
-    .vertical.segment {
-      padding: 1rem !important;
-    }
-
-    .ui.table {
-      max-width: 40rem;
-
-      td:first-of-type {
-        font-weight: bold;
-      }
+    @include desktop {
+      display: block;      
     }
   }
 }

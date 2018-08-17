@@ -2,8 +2,11 @@
   <% for (let fieldName in fields) { %>
     <%- Form.field(fieldName, fieldName, fields[fieldName]) %>
   <% } %>
-  <input type="hidden" name="_subject" value="<%- subject %>" />
-  <input type="hidden" name="_next" value="<%- next %>" />
-  <input type="text" name="_gotcha" style="display:none">
-  <input class="ui button" type="submit" value="Submit">
+
+  <div class="field">
+    <input type="hidden" name="_subject" value="<%- subject %>" />
+    <input type="hidden" name="_next" value="<%- next %>" />
+    <input type="text" name="_gotcha" style="display:none">
+    <input class="button" type="submit" value="Submit">
+  </div>
 </form>
