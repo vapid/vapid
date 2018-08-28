@@ -13,6 +13,16 @@ describe('.constructor', () => {
 
     expect(template.html).toEqual(partialContent);
   });
+
+  test('allows partials within partials', () => {
+    const partials = {
+      outer: '{{> inner}}',
+      inner: 'inner content',
+    };
+    const template = new Template('{{> outer}}', partials);
+
+    expect(template.html).toEqual(partials.inner);
+  });
 });
 
 /**
