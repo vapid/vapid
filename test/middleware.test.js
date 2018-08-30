@@ -110,7 +110,7 @@ describe('security', () => {
 describe('session', () => {
   it('sets the vapid:sess as the key', (done) => {
     app.keys = ['secret'];
-    app.use(middleware.session(app))
+    app.use(middleware.session)
       .use((ctx) => {
         ctx.session.test = 'test';
       });
