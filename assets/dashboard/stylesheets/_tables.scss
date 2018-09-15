@@ -13,7 +13,20 @@
     }
 
     td {
+      display: block;
       padding: 2rem !important;
+
+      &.right {
+        text-align: left;
+
+        @include desktop {
+          text-align: right;
+        }
+      }
+
+      @include desktop {
+        display: table-cell;
+      }
     }
   }
 
@@ -25,6 +38,20 @@
     img {
       width: auto;
       height: 60px;
+    }
+  }
+
+  &.draggable {
+    [aria-dropeffect="move"] {
+      cursor: grab;
+    }
+
+    .sortable-dragging {
+      background-color: inherit;
+    }
+
+    .sortable-placeholder {
+      background-color: $grey-lightest;
     }
   }
 

@@ -12,11 +12,12 @@
   border-radius: 2px;
   white-space: nowrap;
   cursor: pointer;
-  background-color: $blue-light;
-  background-image: linear-gradient(to bottom, $blue-light, $blue);
+  background-color: $purple-light;
+  background-image: linear-gradient(to bottom, $purple-light, $purple);
+  outline: none;
 
   &:hover {
-    background: $blue;
+    background: $purple;
     text-decoration: none;
   }
 
@@ -32,13 +33,24 @@
   }
 
   &.basic {
-    color: $blue;
-    border: 1px solid $blue;
+    color: $purple;
+    border: 1px solid $purple;
     background: white;
 
     &:hover {
       color: white;
-      background: $blue;
+      background: $purple;
+    }
+  }
+
+  &.orange {
+    color: white;
+    background-color: $orange;
+    background-image: linear-gradient(to bottom, $orange, $orange-dark);
+    border: 1px solid $orange-darker;
+
+    &:hover {
+      background: $orange-dark;
     }
   }
 

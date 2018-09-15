@@ -1,18 +1,26 @@
 // Colors
-
 $grey-darkest: #111111;
 $grey-darkerer: #333333;
 $grey-darker: #4A4A4A;
-$grey-dark: #9B9B9B;
-$grey: #CCCCCC;
-$grey-light: #D8D8D8;
-$grey-lighter: #D9D9D9;
+$grey-dark: #979797;
+$grey: #9B9B9B;
+$grey-light: #CCCCCC;
+$grey-lighter: #D8D8D8;
 $grey-lighterer: #EEEEEE;
 $grey-lightest: #F4F4F4;
 
 $blue-dark: #2765AE;
 $blue: #4080CA;
 $blue-light: #4A90E2;
+
+$purple-darker: #4A0C80;
+$purple-dark: #6C0CC0;
+$purple: #9630D5;
+$purple-light: #C982DC;
+
+$orange: #E7C64E;
+$orange-dark: #F7A01C;
+$orange-darker: #F1B045;
 
 $red-darker: #9F041B;
 $red-dark: #C30A1B;
@@ -29,4 +37,5 @@ $navbar-height: 5.6rem;
 $sidebar-width: 20rem;
 
 // Responsive
-$desktop-width: 64rem;
+$desktop-width: 768px;
+$desktop-wide-width: 1280px;

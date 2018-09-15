@@ -13,7 +13,7 @@
     display: block;
     width: 100%;
     padding: 1rem 1rem 1.1rem;
-    border: 1px solid $grey;
+    border: 1px solid $grey-light;
     border-radius: $border-radius;
 
     &::-webkit-input-placeholder { color: $grey; }
@@ -24,7 +24,7 @@
 
   .ace_editor,
   trix-editor {
-    border: 1px solid $grey;
+    border: 1px solid $grey-light;
     border-radius: $border-radius;
   }
 
@@ -36,15 +36,26 @@
   .fields {
     margin-bottom: 4rem;
 
-    &:last-of-type {
+    &.submit {
+      margin-top: -3rem;
       margin-bottom: 0;
     }
 
     &.inline {
-      display: flex;
+      margin-bottom: 0;
 
       input.button {
-        margin-left: 1rem;
+        margin-top: 1rem;
+      }
+
+      @include desktop {
+        display: flex;
+        margin-bottom: 1em;
+
+        input.button {
+          margin-top: 0;
+          margin-left: 1rem;
+        }
       }
     }
 
@@ -81,10 +92,6 @@
       &.error-message {
         color: $red;
         margin-top: 0.5rem;
-      }
-
-      &.requirement {
-        margin-top: 1rem;
       }
     }
 

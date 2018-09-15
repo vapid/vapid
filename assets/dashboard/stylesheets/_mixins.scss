@@ -3,3 +3,15 @@
     @content;
   }
 }
+
+@mixin desktop-wide {
+  @media screen and (min-width: #{$desktop-wide-width}) {
+    @content;
+  }
+}
+
+@mixin tiny-mobile {
+  @media only screen and (max-device-width : 320px) {
+    @content;
+  }
+}

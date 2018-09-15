@@ -1,5 +1,5 @@
-.black.text {
-  color: black;
+.text {
+  &.black { color: black; }
 }
 
 .aligned {

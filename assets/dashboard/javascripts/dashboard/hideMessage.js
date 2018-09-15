@@ -1,3 +1,5 @@
-$('.ui.form').submit(() => {
-  $('.ui.message').hide();
+document.addEventListener("turbolinks:load", () => {
+  $('.form').submit(() => {
+    $('.ui.message').hide();
+  });
 });

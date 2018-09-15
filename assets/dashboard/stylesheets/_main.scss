@@ -1,0 +1,54 @@
+main {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px 0 rgba(204,204,204,0.50);
+
+  .heading {
+    padding: 1.6rem 2rem 1.5rem;
+    font-weight: 500;
+    line-height: 1em;
+    border-bottom: 1px solid $grey-lighterer;
+
+    &, h1 {
+      font-size: 2.4rem;
+    }
+
+    .menu {
+      list-style: none;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+
+      @include desktop-wide {
+        float: right;
+        margin-top: 0;
+      }
+
+      &.fixed {
+        float: right;
+        margin-top: 0;
+
+        li:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      &.basic {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 2.5rem 0 0;
+
+        @include desktop-wide {
+          margin: 0 0 0 2.5rem;
+        }
+      }
+
+      a:not(.button) {
+        color: $grey-darkest;
+      }
+    }
+  }
+}

@@ -4,81 +4,40 @@
   width: $sidebar-width;
   background: $grey-lightest;
   overflow: scroll;
+  padding-top: 0.5rem;
 
   > div:first-child {
     flex: auto;
-
-    > .item {
-      margin-bottom: 2rem;
-    }
-  }
-
-  > div:last-child {
-    width: $sidebar-width - 0.1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-
-    .account {
-      display: block;
-      margin-bottom: 1.5rem;
-      color: $grey-darkest;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-
-      img {
-        display: block;
-        content: '';
-        width: 5rem;
-        height: 5rem;
-        margin: 0 auto 1rem;
-        background: black;
-        border-radius: 100%; 
-      }
-    }
-
-    .vapid {
-      display: block;
-      padding: 1.6rem 2rem 1.4rem;
-      margin-top: 2rem;
-      border-top: 1px solid $grey-lighter;
-
-      svg {
-        width: 5.2rem;
-
-        path {
-          fill: $grey-dark;
-        }
-      }
-
-      &:hover svg path {
-        fill: $grey-darkest;
-      }
-    }
   }
 
   .header {
-    padding: 2rem 2rem 1.9rem;
+    padding: 2rem 2rem 0.7rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    text-transform: uppercase;
     line-height: 1.142857142857143em;
+  }
+
+  .item:first-of-type .header {
+    padding-bottom: 1.4rem;
+    font-size: 1.4rem;
+    text-transform: none;
   }
 
   .menu {
     .item {
       position: relative;
       display: block;
-      padding: 1.5rem 2rem 1.3rem 4.5rem;
+      padding: 1rem 1.7rem 1rem 4.3rem;
       text-decoration: none;
       color: $grey-dark;
+      border-radius: 3px 0 0 3px;
 
       svg {
         position: absolute;
         top: 50%;
         left: 2rem;
-        margin-top: -1rem;
+        margin-top: -0.9rem;
 
         g {
           stroke: $grey-dark;
@@ -95,7 +54,13 @@
       }
 
       &.active {
-        background-color: $grey-lighterer;
+        color: white;
+        background-color: $grey-darkerer;
+
+        g, rect {
+          stroke: white;
+          opacity: 1;
+        }
       }
     }
   }

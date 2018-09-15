@@ -1,75 +1,147 @@
 .navbar {
-  display: flex;
-  height: $navbar-height;
-  align-items: center;
-  color: white;
-  background: $grey-darkest;
-
-  h2 {
-    flex: 1;
-    padding: 0 2rem;
-    font-size: inherit;
-    font-weight: 600;
-    line-height: 1em;
-  }
+  position: relative;
+  height: 5.6rem;
+  margin-bottom: 3rem;
 
   a {
-    color: white;
-    text-decoration: none;
+    color: $grey-darker;
     transition: opacity 0.1s linear;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
+      text-decoration: none;
     }
   }
 
-  .switch-websites {
-    display: none;
-    height: $navbar-height;
-    width: $navbar-height;
-    font-size: 0;
-    background: url(../images/switch.svg) center center no-repeat;
-    border-right: 1px solid $grey-darker;
+  h2 {
+    flex: 1;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1em;
+    text-align: center;
 
-    @include desktop {
+    .switch-website {
       display: inline-block;
+      color: $grey-darker;
+
+      .ui.dropdown {
+        padding: 0;
+
+        .text {
+          margin: 0;
+          color: $grey-darker;
+        }
+
+        .transition.menu {
+          flex-direction: column;
+          margin-top: 1rem;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+          border-radius: 0.5rem;
+          border-width: 1px;
+          min-width: 34rem;
+          overflow: hidden;
+          left: 50% !important;
+          right: auto !important;
+          transform: translateX(-15.6rem);
+          animation: slideInMenu;
+
+          @include tiny-mobile {
+            min-width: 30rem;
+            transform: translateX(-13.6rem);
+          }
+        }
+
+        .scrolling.menu {
+          border-radius: 0 !important;
+        }
+
+        .header {
+          font-size: 1rem;
+          letter-spacing: 1px;
+        }
+
+        .active.item {
+          color: $grey;
+          background-color: $grey-lightest;
+          font-weight: 500;
+
+          &:before {
+            display: inline-block;
+            content: '';
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 100%;
+            background-color: $purple-light;
+            margin-right: 0.5rem;
+          }
+        }
+
+        &:before {
+          content: url(../images/switch.svg);
+          margin-right: 1rem;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    a {
+      color: $grey-darker;
+    }
+
+    .edit-website {
+      content: url(../images/settings.svg);
+      margin-left: 0.8rem;
+      vertical-align: text-bottom;
+    }
+
+    .last-updated {
+      margin-top: 0.8rem;
+      font-size: 1rem;
+      font-weight: normal;
+      color: $grey;
+    }
+
+    time {
+      font-weight: bold;
     }
   }
 
-  .toggle-sidebar {
-    display: inline-block;
-    height: $navbar-height;
-    width: $navbar-height;
-    font-size: 0;
-    background: url(../images/menu.svg) center center no-repeat;
-    border-right: 1px solid $grey-darker;
+  .account {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    margin-top: -1.8rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 100%;
+    overflow: hidden;
 
-    @include desktop {
-      display: none;
-    }
-  }
-
-  .edit-website {
-    display: none;
-    margin-left: 1rem;
-    content: url(../images/settings.svg);
-    vertical-align: middle;
-
-    @include desktop {
-      display: inline-block;
+    img {
+      width: 100%;
+      vertical-align: middle;
     }
   }
 
   .action {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    margin-top: -1.7rem;
     min-width: 0;
-    margin-right: 1rem;
     padding: 0.9rem 1rem;
     font-size: 1.2rem;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid $grey-light;
 
     @include desktop {
       min-width: 11.1rem;
+    }
+
+    &.hidden {
+      display: none;
     }
 
     span {
@@ -82,6 +154,7 @@
 
     &:before {
       display: inline-block;
+      content: url('../images/view.svg');
       vertical-align: middle;
 
       @include desktop {
@@ -89,12 +162,16 @@
       }
     }
 
-    &.view:before {
-      content: url('../images/view.svg');
-    }
+    &.build {
+      @extend .button.orange;
 
-    &.build:before {
-      content: url('../images/build.svg');
+      &:hover {
+        opacity: 1;
+      }
+
+      &:before {
+        content: url('../images/build.svg');
+      }
     }
   }
 }

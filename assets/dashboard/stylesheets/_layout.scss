@@ -1,46 +1,89 @@
+$toggle: -20rem;
+
 body.dashboard {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+  }
+
+  /**
+   * Mobile menu
+   */
+  .sidebar,
+  main {
+    transition: margin 0.15s ease-out;
   }
 
   .sidebar {
-    left: $sidebar-width * -1;
-    position: fixed;
-    height: 100vh;
-    padding-top: $navbar-height;
-    transition: left 0.1s linear;
-    z-index: 10;
+    margin-left: $toggle;
+  }
 
-    &.open {
-      left: 0;
+  main {
+    margin-right: 0;
+
+    /* Hack */
+    max-width: 95%;
+    @media screen and (min-width: 470px) {
+      max-width: 100%;
+    }
+  }
+
+  &.sidebar-open {
+    .sidebar {
+      margin-left: 0;
+    }
+
+    main {
+      margin-right: $toggle;
+    }
+
+    > div {
+      overflow-x: hidden;
+    }
+  }
+
+  @include desktop {
+    .sidebar {
+      margin-left: 0 !important;
+    }
+
+    main {
+      margin-right: 0 !important;
+    }
+  }
+
+  .rail {
+    &.left {
+      padding-left: 1rem;
+    }
+
+    &.right {
+      padding-right: 1rem;
     }
 
     @include desktop {
-      left: 0;
+      &.left {
+        width: 21rem;
+      }
+    }
+
+    @include desktop-wide {
+      &.left {
+        width: 27rem;
+        padding-left: 7rem;
+      }
+
+      &.right {
+        width: 27rem;
+        padding-right: 7rem;
+      }
     }
   }
 
   main {
-    padding: $navbar-height 0 6rem;
-    transition: padding-left 0.1s linear;
-
-    @include desktop {
-      padding-left: $sidebar-width;
-
-      // .heading {
-      //   position: fixed;
-      //   width: 100%;
-      //   background: white;
-      //   z-index: 10;
-
-      //   + .section:first-of-type {
-      //     margin-top: 5rem;
-      //   }
-      // }
-    }
+    flex: 1;
+    min-height: 85vh;
   }
 }
