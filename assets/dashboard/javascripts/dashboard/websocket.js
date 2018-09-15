@@ -1,6 +1,7 @@
-document.addEventListener("turbolinks:load", () => {
-  if ('WebSocket' in window) {
-    const ws = new WebSocket('ws://localhost:3000/livereload');
+if ('WebSocket' in window) {
+  const ws = new WebSocket('ws://localhost:3000/livereload');
+
+  document.addEventListener("turbolinks:load", () => {
     const $build = $('.build.button');
     const $view = $('.view.button');
 
@@ -15,5 +16,5 @@ document.addEventListener("turbolinks:load", () => {
       $build.toggleClass('hidden', !isDirty);
       $view.toggleClass('hidden', isDirty);
     };
-  }
-});
+  });
+}
