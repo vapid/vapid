@@ -22,7 +22,7 @@
     </h2>
 
     <% if (showBuild) { %>
-      <a href="/dashboard/build" class="orange build action button <% if (!needsBuild) { %>hidden<% } %>">  <span>Site is outdated, rebuild now.</span>
+      <a href="/dashboard/build" class="orange build action button <% if (!needsBuild) { %>hidden<% } %>">  <span>Site has changed, rebuild now.</span>
       </a>
       <a href="/" class="view action button <% if (needsBuild) { %>hidden<% } %>" target="_blank"><span>View</span></a>
     <% } else { %>
