@@ -1,19 +1,22 @@
-<h1 class="heading"><%- title %></h1>
+<h1 class="heading">
+  <%- include('../toggle') %>
+  <%- title %>
+</h1>
 
 <section class="section">
   <div class="content">
-    <form class="record form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
+    <form class="form" action="<%- action %>" method="post" enctype="multipart/form-data" data-autosave="true" novalidate>
       <% for (let fieldName in record.section.fields) { %>
-        <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
+        <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors.hasOwnProperty(fieldName) && errors[fieldName]) %>
       <% } %>
 
-      <div class="field">
-        <% if (section.multiple) { %>
-          <a href="<%- deletePath %>" class="right floated red button">Delete</a>
-        <% } %>
+      <div class="submit field">
         <input type="hidden" name="_csrf" value="<%- csrf %>">
         <input class="button" type="submit" value="Update">
+        <% if (section.multiple) { %>
+          <a href="./delete" class="floated right basic red button">Delete</a>
+        <% } %>
       </div>
-    </form>
-  </div>
+    </form> 
+  </div> 
 </section>

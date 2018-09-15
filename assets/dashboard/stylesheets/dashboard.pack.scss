@@ -1,7 +1,8 @@
 @import url(/dashboard/vendor/trix/trix.css);
 
-@import "vars";
+@import "variables";
 @import "mixins";
+@import "animations";
 @import "base";
 @import "layout";
 @import "forms";
@@ -11,6 +12,8 @@
 @import "tables";
 @import "navbar";
 @import "sidebar";
+@import "main";
+@import "footer";
 
 @import "auth";
 @import "error";

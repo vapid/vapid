@@ -1,9 +1,9 @@
-<form class="ui form" action="https://formspree.io/<%- recipient %>" method="post">
+<form class="form" action="https://formspree.io/<%- recipient %>" method="post">
   <% for (let fieldName in fields) { %>
     <%- Form.field(fieldName, fieldName, fields[fieldName]) %>
   <% } %>
 
-  <div class="field">
+  <div class="submit field">
     <input type="hidden" name="_subject" value="<%- subject %>" />
     <input type="hidden" name="_next" value="<%- next %>" />
     <input type="text" name="_gotcha" style="display:none">

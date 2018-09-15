@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="25px" height="22px" viewBox="0 0 25 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Icon - switch sites</title>
+    <title>Switch</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Dashboard-and-admin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Dashboard---Website-Settings-Copy" transform="translate(-19.000000, -19.000000)" stroke="#FFFFFF">
+    <g id="V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard---v2" transform="translate(-597.000000, -22.000000)" fill="#9B9B9B">
             <g id="Header---branding-+-main-actions">
-                <g id="Icon---switch-sites" transform="translate(20.000000, 19.000000)">
-                    <g id="Stroke-3625-+-Stroke-3626" transform="translate(0.000000, 12.000000)">
-                        <path d="M0,5 L18,5" id="Stroke-3625"></path>
-                        <polyline id="Stroke-3626" points="4.24185 9.5 -0.00015 5 4.25835 0.758"></polyline>
-                    </g>
-                    <g id="Stroke-3625-+-Stroke-3626" transform="translate(14.000000, 5.000000) scale(-1, 1) translate(-14.000000, -5.000000) translate(5.000000, 0.000000)">
-                        <path d="M0,5 L18,5" id="Stroke-3625"></path>
-                        <polyline id="Stroke-3626" points="4.24185 9.5 -0.00015 5 4.25835 0.758"></polyline>
+                <g id="Site-avatar-+-name" transform="translate(596.000000, 21.000000)">
+                    <g id="Switch">
+                        <path d="M3,11 L7,11 L7,12 L3,12 L2,12 L2,7 L3,7 L3,11 Z" id="Combined-Shape" transform="translate(4.500000, 9.500000) rotate(-45.000000) translate(-4.500000, -9.500000) "></path>
+                        <path d="M3,6 L7,6 L7,7 L3,7 L2,7 L2,2 L3,2 L3,6 Z" id="Combined-Shape" transform="translate(4.500000, 4.500000) rotate(-225.000000) translate(-4.500000, -4.500000) "></path>
                     </g>
                 </g>
             </g>

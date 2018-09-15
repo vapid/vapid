@@ -14,6 +14,7 @@ body {
   font-family: $font-sans;
   font-size: 1.4rem;
   color: $grey-darkest;
+  background-color: $grey-lightest;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,7 +24,7 @@ p {
 }
 
 a {
-  color: $blue-dark;
+  color: $purple-darker;
   text-decoration: none;
 
   &:hover {
@@ -46,44 +47,16 @@ a {
   }
 }
 
-main {
-  .heading {
-    padding: 1.6rem 2rem 1.5rem;
-    font-weight: 500;
-    line-height: 1em;
-    border-bottom: 1px solid $grey-lighterer;
+.toggle-sidebar {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.1rem;
+  margin-right: 1rem;
+  font-size: 0;
+  background: url(../images/menu.svg) center top no-repeat;
+  vertical-align: middle;
 
-    &, h1 {
-      font-size: 2.4rem;
-    }
-
-    .menu {
-      list-style: none;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-
-      @include desktop {
-        float: right;
-        margin-top: 0;
-      }
-
-      &.basic {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      li {
-        display: inline-block;
-        margin: 0 2.5rem 0 0;
-
-        @include desktop {
-          margin: 0 0 0 2.5rem;
-        }
-      }
-
-      a:not(.button) {
-        color: $grey-darkest;
-      }
-    }
+  @include desktop {
+    display: none;
   }
 }

@@ -1,14 +1,14 @@
 <% if (section.hasFields) { %>
-<form class="record form" action="<%- action %>" method="post" enctype="multipart/form-data" novalidate>
+<form class="form" action="<%- action %>" method="post" enctype="multipart/form-data" data-autosave="true" novalidate>
   <% for (let fieldName in section.fields) { %>
-    <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors[fieldName]) %>
+    <%- Form.field(`content[${fieldName}]`, fieldName, section.fields[fieldName], record.content[fieldName], errors.hasOwnProperty(fieldName) && errors[fieldName]) %>
   <% } %>
 
-  <div class="field">
+  <div class="submit field">
     <input type="hidden" name="_csrf" value="<%- csrf %>">
     <input class="button" type="submit" value="Save">
   </div>
 </form>
 <% } else { %>
-  <p>This section has no fields. Learn how to add them at <a href="https://docs.vapid.com">docs.vapid.com</a>.</p>
+  <p>This section has no fields. View the <a href="https://docs.vapid.com" title="Vapid documentation">documentation</a> if you need help creating some.</p>
 <% } %>

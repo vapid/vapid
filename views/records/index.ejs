@@ -1,8 +1,9 @@
 <div class="heading">
+  <%- include('../toggle') %>
   <%- title %>
   
-  <ul class="basic menu">
-    <li><a href="./records/new" class="small basic button">New <%- section.labelSingular %></a></li>
+  <ul class="basic fixed menu">
+    <li><a href="/dashboard/sections/<%- section.id %>/records/new" class="small button">New <%- section.labelSingular %></a></li>
   </ul>
 </div>
 
@@ -24,7 +25,7 @@
           <td><%- record.previewContent(key.toLowerCase(), section) %></td>
           <% }) %>
           <td class="right aligned">
-            <a href="../../records/<%- record.id %>/edit" class="small basic button">
+            <a href="/dashboard/records/<%- record.id %>/edit" class="small basic button">
               Edit
             </a>
           </td>

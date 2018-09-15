@@ -1,4 +1,7 @@
-<h1 class="heading">Delete <%- record.section.labelSingular %></h1>
+<h1 class="heading">
+  <%- include('../toggle') %>
+  Delete <%- record.section.labelSingular %>
+</h1>
 
 <section class="section">
   <div class="content">
@@ -15,11 +18,13 @@
       </tbody>
     </table>
 
-    <br><br>
+    <br>
 
-    <form method="post">
-      <input type="hidden" name="_csrf" value="<%- csrf %>">
-      <input type="submit" class="red button" value="Delete">
+    <form action="<%- requestURL %>" method="post">
+      <div class="submit field">
+        <input type="hidden" name="_csrf" value="<%- csrf %>">
+        <input type="submit" class="red button" value="Delete">
+      </div>
     </form> 
   </div>
 </section>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Icons/Form</title>
+<svg width="14px" height="18px" viewBox="0 0 14 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Black/Group</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Current" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
-        <g id="Dashboard---speculative-sidebar" transform="translate(-21.000000, -404.000000)">
-            <g id="Sidebar---content" transform="translate(-1.000000, 0.000000)">
-                <g id="Group" transform="translate(1.000000, 365.000000)">
-                    <g id="Characters" transform="translate(0.000000, 28.000000)">
-                        <g id="Icons/Form" transform="translate(19.000000, 11.000000)">
+    <g id="V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.4">
+        <g id="Dashboard---v2" transform="translate(-92.000000, -372.000000)">
+            <g id="Content-sidebar" transform="translate(70.000000, 88.000000)">
+                <g id="Forms" transform="translate(0.000000, 255.000000)">
+                    <g id="FAQ" transform="translate(0.000000, 20.000000)">
+                        <g id="Icons/Black/Form" transform="translate(20.000000, 9.000000)">
                             <g id="Group" transform="translate(2.000000, 0.000000)">
-                                <rect id="Rectangle-5" stroke="#111111" x="0.5" y="0.5" width="17" height="21" rx="2"></rect>
-                                <rect id="Rectangle-2" stroke="#000000" fill-rule="nonzero" x="4.5" y="5.5" width="9" height="2" rx="0.5"></rect>
-                                <rect id="Rectangle-2" stroke="#000000" fill-rule="nonzero" x="4.5" y="10.5" width="9" height="6" rx="0.5"></rect>
+                                <rect id="Rectangle-5" stroke="#111111" x="0.5" y="0.5" width="13" height="17" rx="2"></rect>
+                                <rect id="Rectangle-2" stroke="#000000" fill-rule="nonzero" x="3.5" y="3.5" width="7" height="2" rx="0.5"></rect>
+                                <rect id="Rectangle-2" stroke="#000000" fill-rule="nonzero" x="3.5" y="8.5" width="7" height="6" rx="0.5"></rect>
                             </g>
                         </g>
                     </g>

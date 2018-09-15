@@ -1,17 +1,19 @@
-require('brace');
+require('brace')
 
-// Ace Editor
-$('.ace_editor').each(function () {
-  const $editor = $(this);
-  const $textarea = $editor.next('textarea');
+document.addEventListener("turbolinks:load", () => {
+  // Ace Editor
+  $('.ace_editor').each(function () {
+    const $editor = $(this);
+    const $textarea = $editor.next('textarea');
 
-  editor = ace.edit(this);
-  editor.getSession().setValue($textarea.val());
+    editor = ace.edit(this);
+    editor.getSession().setValue($textarea.val());
 
-  editor.getSession().on('change', () => {
-    $textarea.val(editor.getSession().getValue());
+    editor.getSession().on('change', () => {
+      $textarea.val(editor.getSession().getValue());
+    });
+
+    $editor.height(300);
+    $textarea.hide();
   });
-
-  $editor.height(300);
-  $textarea.hide();
 });

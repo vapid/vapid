@@ -1,11 +1,15 @@
-<h1 class="heading"><%- title %></h1>
+<h1 class="heading">
+  <%- include('../toggle') %>
+  <%- title %>
+</h1>
 
 <section class="section">
   <div class="content">
     <%- include(`_form_${form}`) %>
 
     <% if (form == 'email') { %>
-      <p><em>Note: This preview form is styled using Semantic UI, and may not resemble the one rendered on your site.</em></p>
-    <% } %>    
+      <br>
+      <p><em>Note: This preview form may not resemble the one rendered on your site.</em></p>
+    <% } %>  
   </div>
 </section>

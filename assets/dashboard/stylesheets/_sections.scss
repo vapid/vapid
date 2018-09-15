@@ -26,6 +26,7 @@
   > .content {
     // For table/Trix on mobile
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .subheader {

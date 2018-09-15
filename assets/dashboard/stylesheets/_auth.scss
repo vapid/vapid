@@ -9,6 +9,8 @@ body.auth {
     flex-direction: column;
     flex: 1;
     justify-content: center;
+    background: none;
+    box-shadow: none;
 
     width: 100%;
     max-width: 50rem;
@@ -49,7 +51,7 @@ body.auth {
     text-align: center;
 
     a.item {
-      color: $grey;
+      color: $grey-dark;
     }
   }
 }
