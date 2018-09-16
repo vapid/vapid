@@ -802,6 +802,13 @@ buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
+buffer@^5.1.0:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.2.1.tgz#dd57fa0f109ac59c602479044dca7b8b3d0b71d6"
+  dependencies:
+    base64-js "^1.0.2"
+    ieee754 "^1.1.4"
+
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -1298,7 +1305,7 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-copy-to@^2.0.1, copy-to@~2.0.1:
+copy-to@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/copy-to/-/copy-to-2.0.1.tgz#2680fbb8068a48d08656b6098092bdafc906f4a5"
 
@@ -1306,13 +1313,15 @@ core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.6.tgz#0fe6d45bf3cac3ac364a9d72de7576f4eb221b9d"
 
-core-util-is@1.0.2, core-util-is@~1.0.0:
+core-util-is@1.0.2, core-util-is@^1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-crc@~3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/crc/-/crc-3.5.0.tgz#98b8ba7d489665ba3979f59b21381374101a1964"
+crc@^3.4.4:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/crc/-/crc-3.8.0.tgz#ad60269c2c856f8c299e2c4cc0de4556914056c6"
+  dependencies:
+    buffer "^5.1.0"
 
 create-ecdh@^4.0.0:
   version "4.0.3"
@@ -1535,7 +1544,7 @@ debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.1, debug@^2.6
   dependencies:
     ms "2.0.0"
 
-debug@^3.1.0, debug@~3.1.0:
+debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -3016,6 +3025,10 @@ is-ci@^1.0.10:
   dependencies:
     ci-info "^1.0.0"
 
+is-class@~0.0.4:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/is-class/-/is-class-0.0.5.tgz#220a8465d24f9a142082d06c7c56edb39052416d"
+
 is-data-descriptor@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/is-data-descriptor/-/is-data-descriptor-0.1.4.tgz#0b5ee648388e2c860282e793f1856fec3f301b56"
@@ -3227,6 +3240,14 @@ is-svg@^2.0.0:
 is-symbol@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
+
+is-type-of@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/is-type-of/-/is-type-of-1.2.0.tgz#b553cbb4621adf5b4171e8883f370e7a6ec38995"
+  dependencies:
+    core-util-is "^1.0.2"
+    is-class "~0.0.4"
+    isstream "~0.1.2"
 
 is-typedarray@~1.0.0:
   version "1.0.0"
@@ -3812,16 +3833,6 @@ koa-csrf@^3.0.6:
   dependencies:
     csrf "^3.0.3"
 
-koa-generic-session@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/koa-generic-session/-/koa-generic-session-2.0.1.tgz#d6bdf4f288b2f553065d049a630c28c76d877ccf"
-  dependencies:
-    copy-to "~2.0.1"
-    crc "~3.5.0"
-    debug "~3.1.0"
-    parseurl "~1.3.1"
-    uid-safe "~2.1.4"
-
 koa-helmet@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/koa-helmet/-/koa-helmet-4.0.0.tgz#a122243e937de71384006f99ee6b63a404d3b081"
@@ -3875,6 +3886,16 @@ koa-send@^4.0.0, koa-send@^4.1.0:
     http-errors "^1.6.1"
     mz "^2.6.0"
     resolve-path "^1.4.0"
+
+koa-session@^5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/koa-session/-/koa-session-5.9.0.tgz#e0283fa81999afe25f7c7979f3dec2b8a26ac005"
+  dependencies:
+    crc "^3.4.4"
+    debug "^3.1.0"
+    is-type-of "^1.0.0"
+    pedding "^1.1.0"
+    uid-safe "^2.1.3"
 
 koa-static@^4.0.2:
   version "4.0.2"
@@ -4974,7 +4995,7 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
-parseurl@^1.3.2, parseurl@~1.3.1:
+parseurl@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
 
@@ -5070,6 +5091,10 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+pedding@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/pedding/-/pedding-1.1.0.tgz#f7b138c288d4bd584eada1215f5bd924f1e1e667"
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -6753,7 +6778,7 @@ uid-safe@2.1.4:
   dependencies:
     random-bytes "~1.0.0"
 
-uid-safe@~2.1.4:
+uid-safe@^2.1.3:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/uid-safe/-/uid-safe-2.1.5.tgz#2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a"
   dependencies:
