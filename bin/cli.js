@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 const program = require('commander');
 const inquirer = require('inquirer');
+const updateNotifier = require('update-notifier');
 
-const { version } = require('../package.json');
+const pkg = require('../package.json');
 const Deployer = require('../lib/deployer');
 const Generator = require('../lib/generator');
 const Logger = require('../lib/logger');
@@ -13,6 +14,8 @@ function withVapid(command) {
     try {
       const cwd = target instanceof program.Command ? process.cwd() : target;
       const vapid = new Vapid(cwd);
+
+      updateNotifier({ pkg }).notify({ isGlobal: true });
       await command(vapid);
     } catch (err) {
       // TODO: Deployer throws err.message, handle better
@@ -129,7 +132,7 @@ program
  * version - prints the current Vapid version number
  */
 program
-  .version(`Vapid ${version}`, '-v, --version');
+  .version(`Vapid ${pkg.version}`, '-v, --version');
 
 /**
  * catch all command - shows the help text

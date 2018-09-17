@@ -86,6 +86,7 @@
     "turbolinks": "^5.2.0",
     "umzug": "^2.1.0",
     "unfurl.js": "^1.1.6",
+    "update-notifier": "^2.5.0",
     "webpack": "^4.8.2",
     "write-pkg": "^3.1.0"
   },
