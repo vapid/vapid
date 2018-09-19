@@ -4,62 +4,57 @@
   <title>Vapid Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Work+Sans:400,800" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 </head>
-<body>
-  <div class="ui container">
-    <div class="ui top fixed inverted menu">
-      <div class="right menu">
-        <a href="/dashboard" class="item">Dashboard Login</a>
-      </div>
-    </div>
+<body style="background-image: url({{background_image type=image tag=false required=false}})">
+  <header class="header">
+    <h2>A New Site</h2>
+    <h1><span>Hello, {{vapid label="Greeting"}}</span></h1>
 
-    <div class="ui vertical segment" style="margin-top: 50px">
-      <h1>Hello, {{world}}!</h1>
-      <p>Intro text, and general instructions for developing and deploying go here.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="container">
+      <p>This template already has few tags—visit the dashboard now to edit their content. And when you're done, <a href="https://docs.vapid.com/content-types" target="_blank">add your own content tags</a>.</p>
+      <p><a href="/dashboard" class="login button">Login</a></p>
+      <p><small>Lastly, submit the contact form below.</small></p>
     </div>
+  </header>
 
-    <div class="ui vertical segment">
-      <h2>Sections</h2>
-      <p>Organize content into sections.</p>
-      {{#section about}}
-        <h3>{{title}}</h3>
-        {{body type=html}}
-      {{/section}}
-    </div>
+  <section>
+    <div class="container">
+      <header>
+        <h2>Contact Yourself</h2>
+        <p>Before submitting this form, <a href="/dashboard">login to the dashboard</a>. We'll send the form submission to the email address you provided when setting up the dashboard, via <a href="http://formspree.io/" target="_blank">Formspree</a>.</p>
+      </header>
 
-    <div class="ui vertical segment">
-      <h2>Repeating Content</h2>
-      <p>Sections with pluralized names understand that you want more than one record.</p>
-      <div class="ui list">
-        {{#section offices order=name}}
-          <div class="item">
-            <strong>{{name}}</strong><br>
-            {{city}}, {{state}}
-          </div>
-        {{/section}}
-      </div>
+      {{#form contact subject="Vapid Example Contact Form"}}
+        {{name}}
+        {{email}}
+        {{message long=true}}
+      {{/form}}
     </div>
+  </section>
 
-    <div class="ui vertical segment">
-      <h2>Forms</h2>
-      <p>Create submittable forms using familiar syntax. No config necessary. Submissions are received to the email address you use for the <a href="/dashboard">Dashboard</a>, and sent via <a href="https://formspree.io/" target="_blank">Formspree</a>..</p>
-      <div class="ui list">
-        {{#form contact subject="Vapid Example Form"}}
-          {{name label="Your Name" placeholder="Lazlo Hollyfeld"}}
-          {{email placeholder="you@example.com"}}
-          {{message long=true required=false}}
-        {{/form}}
-      </div>
-    </div>
-  </div>
+  <footer>
+    <a href="https://www.vapid.com" title="Vapid: an intentionally simple CMS" target="_blank">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg width="104px" height="30px" viewBox="0 0 52 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.399999976">
+          <g id="Dashboard---v2" transform="translate(-680.000000, -949.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Footer" transform="translate(680.000000, 949.000000)">
+              <g id="Made-with-Vapid">
+                <g id="Group-9">
+                  <g id="vapid-logo-assets_Wordmark">
+                    <path d="M13.8221846,1.31165725 L1.01947502,14.1143668 C0.900931414,14.2092017 0.734970364,14.2803279 0.592718036,14.2803279 C0.521591871,14.2803279 0.450465707,14.2566191 0.355630821,14.2329104 C0.142252329,14.1380755 0,13.924697 0,13.6876098 L0,0.884900265 C0,0.552978165 0.260795936,0.29218223 0.592718036,0.29218223 C0.924640135,0.29218223 1.18543607,0.552978165 1.18543607,0.884900265 L1.18543607,12.2650865 L12.9686706,0.45814328 C13.2057578,0.221056065 13.5850974,0.221056065 13.7984759,0.45814328 C14.0355631,0.695230494 14.0355631,1.07457004 13.8221846,1.31165725 Z M19.6782388,0.339599672 C19.4411516,0.244764787 19.2040644,0.29218223 19.0381033,0.45814328 L6.23539373,13.2608528 C5.99830652,13.4979401 5.99830652,13.8772796 6.23539373,14.0906581 C6.35393734,14.2092017 6.49618967,14.2566191 6.66215072,14.2566191 C6.82811177,14.2566191 6.9703641,14.2092017 7.08890771,14.0906581 L18.8484335,2.30742355 L18.8484335,8.82732194 L15.1735817,8.82732194 C14.8416596,8.82732194 14.5808637,9.08811788 14.5808637,9.42003998 C14.5808637,9.75196208 14.8416596,10.012758 15.1735817,10.012758 L18.8484335,10.012758 L18.8484335,13.6876098 C18.8484335,14.0195319 19.1092295,14.2803279 19.4411516,14.2803279 C19.7730737,14.2803279 20.0338696,14.0195319 20.0338696,13.6876098 L20.0338696,0.884900265 C20.0338696,0.647813051 19.8916173,0.434434558 19.6782388,0.339599672 Z M36.0372566,0.29218223 C35.7053345,0.29218223 35.4445385,0.552978165 35.4445385,0.884900265 L35.4445385,13.6876098 C35.4445385,14.0195319 35.7053345,14.2803279 36.0372566,14.2803279 C36.3691787,14.2803279 36.6299746,14.0195319 36.6299746,13.6876098 L36.6299746,0.884900265 C36.6299746,0.552978165 36.3691787,0.29218223 36.0372566,0.29218223 Z M27.9762913,0.29218223 L23.7087214,0.29218223 C23.3767993,0.29218223 23.1160034,0.552978165 23.1160034,0.884900265 L23.1160034,13.6876098 C23.1160034,14.0195319 23.3767993,14.2803279 23.7087214,14.2803279 C24.0406435,14.2803279 24.3014395,14.0195319 24.3014395,13.6876098 L24.3014395,1.4776183 L27.9762913,1.4776183 C29.9915326,1.4776183 31.6511431,3.1372288 31.6511431,5.15247012 C31.6511431,7.16771144 30.0152413,8.82732194 27.9762913,8.82732194 C27.6443692,8.82732194 27.3835732,9.08811788 27.3835732,9.42003998 C27.3835732,9.75196208 27.6443692,10.012758 27.9762913,10.012758 C30.6553768,10.012758 32.8365792,7.83155564 32.8365792,5.15247012 C32.8365792,2.4733846 30.6553768,0.29218223 27.9762913,0.29218223 Z M44.5723963,0.29218223 L40.3048264,0.29218223 C39.9729043,0.29218223 39.7121084,0.552978165 39.7121084,0.884900265 L39.7121084,13.6876098 C39.7121084,14.0195319 39.9729043,14.2803279 40.3048264,14.2803279 C40.6367485,14.2803279 40.8975445,14.0195319 40.8975445,13.6876098 L40.8975445,1.4776183 L44.5723963,1.4776183 C47.7730737,1.4776183 50.381033,4.08557766 50.381033,7.28625505 C50.381033,10.4869324 47.7730737,13.0948918 44.5723963,13.0948918 C44.2404742,13.0948918 43.9796782,13.3556877 43.9796782,13.6876098 C43.9796782,14.0195319 44.2404742,14.2803279 44.5723963,14.2803279 C48.4369179,14.2803279 51.5664691,11.1507766 51.5664691,7.28625505 C51.5664691,3.42173346 48.4369179,0.29218223 44.5723963,0.29218223 Z" id="Shape"></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
+  </footer>
+
   <script src="/javascripts/site.js"></script>
 </body>
 </html>
