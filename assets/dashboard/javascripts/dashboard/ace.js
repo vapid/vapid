@@ -6,7 +6,7 @@ document.addEventListener("turbolinks:load", () => {
     const $editor = $(this);
     const $textarea = $editor.next('textarea');
 
-    editor = ace.edit(this);
+    var editor = ace.edit(this);
     editor.getSession().setValue($textarea.val());
 
     editor.getSession().on('change', () => {
