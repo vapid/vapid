@@ -1,6 +1,6 @@
 <img src="http://cdn.vapid.com/logo.svg" width="300px" height="auto" alt="Vapid logo">
 
-A template-driven content management system.
+Vapid is an intentionally simple content management system built on the idea that you can create a custom dashboard without ever leaving the HTML.
 
 [![CircleCI](https://circleci.com/gh/vapid/vapid.svg?style=svg)](https://circleci.com/gh/vapid/vapid)
 
