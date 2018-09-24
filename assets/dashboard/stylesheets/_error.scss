@@ -34,4 +34,12 @@ body.error {
       display: block;      
     }
   }
+
+  &.trace {
+    display: block;
+
+    pre, .table {
+      font-size: 1.4rem;
+    }
+  }
 }
