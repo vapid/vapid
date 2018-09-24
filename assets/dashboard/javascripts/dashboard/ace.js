@@ -5,8 +5,8 @@ document.addEventListener("turbolinks:load", () => {
   $('.ace_editor').each(function () {
     const $editor = $(this);
     const $textarea = $editor.next('textarea');
+    const editor = ace.edit(this);
 
-    editor = ace.edit(this);
     editor.getSession().setValue($textarea.val());
 
     editor.getSession().on('change', () => {
