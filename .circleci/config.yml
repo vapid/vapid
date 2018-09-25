@@ -1,11 +1,15 @@
+workflows:
+  version: 2
+  node-multi-build:
+    jobs:
+      - build
+      - build-10
+
 version: 2
 jobs:
-  build:
+  node-base: &node-base
     docker:
-      - image: circleci/node:8.9
-
-    working_directory: ~/repo
-
+      - image: circleci/node:8
     steps:
       - checkout
       - restore_cache:
@@ -22,3 +26,13 @@ jobs:
 
       - run: yarn lint
       - run: yarn test
+    working_directory: ~/repo
+
+  build:
+    <<: *node-base
+    docker:
+      - image: circleci/node:8
+  build-10:
+    <<: *node-base
+    docker:
+      - image: circleci/node:10
