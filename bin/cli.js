@@ -4,6 +4,7 @@ const inquirer = require('inquirer');
 const updateNotifier = require('update-notifier');
 
 const pkg = require('../package.json');
+const services = require('../lib/services');
 const Deployer = require('../lib/deployer');
 const Generator = require('../lib/generator');
 const Logger = require('../lib/logger');
@@ -53,6 +54,12 @@ program
   .command('start')
   .description('start the server')
   .action(withVapid(async (vapid) => {
+    const portInUse = new services.PortChecker(vapid.config.port).perform();
+
+    if (portInUse) {
+      throw new Error(`Could not start server, port ${vapid.config.port} is alreadly in use.`);
+    }
+
     Logger.info(`Starting the ${vapid.env} server...`);
     await vapid.start();
     Logger.extra([
