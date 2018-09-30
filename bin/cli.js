@@ -54,7 +54,7 @@ program
   .command('start')
   .description('start the server')
   .action(withVapid(async (vapid) => {
-    const portInUse = new services.PortChecker(vapid.config.port).perform();
+    const portInUse = await new services.PortChecker(vapid.config.port).perform();
 
     if (portInUse) {
       throw new Error(`Could not start server, port ${vapid.config.port} is alreadly in use.`);
