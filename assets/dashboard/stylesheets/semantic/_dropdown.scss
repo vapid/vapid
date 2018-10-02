@@ -61,6 +61,9 @@
   transition: opacity 0.1s ease;
   z-index: 11;
   will-change: transform, opacity;
+
+  /* HACK: Not sure why it's apply flex */
+  flex-direction: column;
 }
 .ui.dropdown .menu > * {
   white-space: nowrap;
