@@ -9,7 +9,7 @@ Vapid is an intentionally simple content management system built on the idea tha
 Vapid requires **node v8.9.0** or higher, and can be installed via [npm](https://www.npmjs.com/)
 
 ```
-npm install -g vapid-cli
+npm install -g @vapid/cli
 ```
 
 _Note: A desktop GUI application is coming soon—please add yourself to [the mailing list](https://www.vapid.com) if you'd like to be notified when that is available._
