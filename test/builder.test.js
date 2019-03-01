@@ -35,9 +35,9 @@ describe('#tree', () => {
 });
 
 describe('#build', () => {
-  test.skip();
+  // test.skip();
 });
 
 describe('#isDirty', () => {
-  test.skip();
+  // test.skip();
 });

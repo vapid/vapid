@@ -26,14 +26,14 @@ afterEach((done) => {
  * ASSETS
  */
 describe('assets', () => {
-  test.skip();
+  // test.skip();
 });
 
 /**
  * FAVICON
  */
 describe('favicon', () => {
-  test.skip();
+  // test.skip();
 });
 
 /**
@@ -119,7 +119,7 @@ describe('image processing', () => {
  * LOGS
  */
 describe('logs', () => {
-  test.skip();
+  // test.skip();
 });
 
 /**
@@ -210,5 +210,5 @@ describe('session', () => {
  * WEBPACK
  */
 describe('webpack', () => {
-  test.skip();
+  // test.skip();
 });
