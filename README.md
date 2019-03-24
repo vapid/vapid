@@ -45,7 +45,7 @@ Vapid can be deployed to any hosting service that supports Node.js. Here are a f
 
 Service | Notes
 --- | ---
-Vapid | Zero-config service that can be accessed via the `vapid deploy` command. Note: it is currently in [private beta](https://www.vapid.com).
+Vapid | Zero-config service that can be accessed via the `vapid deploy` command.
 Heroku | Free or paid tiers. One thing to note is that Heroku's file system is ephemeral, so Vapid's `type=image` directives won't work here.
 Glitch | The easiest way to [take Vapid for a test-drive](https://glitch.com/edit/#!/remix/vapid?SECRET_KEY=change-me).
 
