@@ -1,4 +1,4 @@
-require('brace')
+require('ace-builds');
 
 document.addEventListener("turbolinks:load", () => {
   // Ace Editor
@@ -7,14 +7,14 @@ document.addEventListener("turbolinks:load", () => {
     const $textarea = $editor.next('textarea');
     const editor = ace.edit(this);
 
+    $editor.height(300);
+    $textarea.hide();
+
     editor.getSession().setUseWrapMode(true);
     editor.getSession().setValue($textarea.val());
 
     editor.getSession().on('change', () => {
       $textarea.val(editor.getSession().getValue());
     });
-
-    $editor.height(300);
-    $textarea.hide();
   });
 });
