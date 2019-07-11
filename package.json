@@ -41,7 +41,7 @@
     "bcrypt": "^3.0.3",
     "colors": "^1.1.2",
     "commander": "^2.12.2",
-    "css-loader": "^0.28.11",
+    "css-loader": "^3.0.0",
     "dotenv": "^5.0.1",
     "ejs": "^2.5.7",
     "flatpickr": "^4.5.4",
@@ -103,10 +103,5 @@
     "image-size": "^0.6.3",
     "jest": "^24.1.0",
     "supertest": "^3.0.0"
-  },
-  "resolutions": {
-    "handlebars": "^4.1.2",
-    "js-yaml": "^3.13.1",
-    "webpack-dev-middleware": "^3.0.1"
   }
 }
