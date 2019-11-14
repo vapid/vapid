@@ -49,6 +49,8 @@ Vapid | Zero-config service that can be accessed via the `vapid deploy` command.
 Heroku | Free or paid tiers. One thing to note is that Heroku's file system is ephemeral, so Vapid's `type=image` directives won't work here.
 Glitch | The easiest way to [take Vapid for a test-drive](https://glitch.com/edit/#!/remix/vapid?SECRET_KEY=change-me).
 
+Or, use the `vapid build` command to export to a static website, and host on S3, [Surge](https://surge.sh/), or the like.
+
 ## Community
 
 If you'd like to get involved, and help improve Vapid:
