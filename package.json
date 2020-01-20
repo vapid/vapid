@@ -1,6 +1,6 @@
 {
   "name": "@vapid/cli",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "license": "MIT",
   "description": "A template-driven content management system",
   "repository": "vapid/vapid",
