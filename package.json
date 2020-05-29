@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=10"
   },
   "keywords": [
     "app",
