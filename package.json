@@ -90,7 +90,7 @@
     "turbolinks": "^5.2.0",
     "umzug": "^2.1.0",
     "unfurl.js": "^1.1.6",
-    "update-notifier": "^2.5.0",
+    "update-notifier": "^4.1.0",
     "webpack": "^4.43.0",
     "write-pkg": "^3.1.0"
   },
